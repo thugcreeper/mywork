@@ -1,0 +1,151 @@
+import pygame as pg
+import sys
+from notes_data import notes1, notes2
+
+# Init
+pg.init()
+pg.mixer.init()
+
+# music settings
+pg.mixer.music.load("auxesia music.wav")
+pg.mixer.music.set_volume(0.2)
+pg.mixer.music.play()
+
+# screen settings
+width = 600
+height = 600
+screen = pg.display.set_mode((width, height), flags=pg.RESIZABLE)
+
+clock = pg.time.Clock()
+
+pg.display.set_caption("auxesia")
+purple = (238, 130, 238)
+light_purple = (216, 191, 216)
+cyan = (0, 255, 255)
+start_point = (0, 550)
+end_point = (600, 550)
+thickness = 5
+
+# Background
+background_image = pg.image.load("auxesia for project.jpg").convert()
+
+screen.blit(background_image, [0, 0])
+
+recall = 0
+
+font = pg.font.SysFont("couriernew", 50)
+
+ball_x1 = 75
+ball_y1 = 550
+
+balls = [{'ballx1': 75, 'bally1': 550, 'ballspeed': 100}]
+
+def showtext():
+    global recall
+    text = font.render("combo:" + str(recall), True, (186, 85, 211))
+    screen.blit(text, (150, 550))
+
+def judge():
+    while ball['bally1'] == note['y']:
+        if -20 < ball_y1 - note['y'] < 20:
+            recall += 1
+        else:
+            recall = 0
+
+def move_balls():
+    for ball in balls:
+        ball['bally1'] -= ball['ballspeed']
+
+def scorecaculator():
+    global recall
+    text = font.render("combo:" + str(recall), True, (186, 85, 211))
+    screen.blit(text, (150, 550))
+    for note_list in [notes1, notes2]:
+        for note in note_list:
+            if note['y'] == 550:
+                recall += 0
+
+remove_note = False
+note_remove_index = -1
+remove_notes_indices = []
+remove_balls_indices = []
+
+# Run
+running = True
+
+while running:
+    screen.blit(background_image, [0, 0])
+    clock.tick(100)
+    
+    # 清空要删除的音符和球的索引列表
+    remove_balls_indices = []
+    remove_notes_indices = []
+    
+    for event in pg.event.get():
+        if event.type == pg.QUIT:
+            running = False
+        if event.type == pg.KEYDOWN:
+            for note in notes1 + notes2:
+                # 检查是否按下了与音符对应的键，并且音符的y坐标接近550
+                if event.key == getattr(pg, 'K_' + note['key']) and 530 <= note['y'] <= 550:
+                    notes1.remove(note) if note in notes1 else notes2.remove(note)
+                    recall += 1
+                    
+            if event.key == pg.K_ESCAPE:
+                pg.quit()
+            
+            if remove_note:
+                notes1.pop(note_remove_index)
+                notes2.pop(note_remove_index)
+                remove_note = False
+                note_remove_index = -1
+
+    move_balls()
+
+    pg.draw.line(screen, purple, start_point, end_point, thickness)
+
+    for i in range(4):
+        pg.draw.circle(screen, cyan, (75 + i * 150, 550), 5)
+
+    scorecaculator()
+
+    for note in notes1:
+        note['y'] += note['speed']
+        pg.draw.line(screen, cyan, (note['x1'], note['y']), (note['x2'], note['y']), 20)
+        note['rect'] = pg.Rect(note['x1'], note['y'], 20, 20)
+        for ball in balls:
+            if note['rect'].colliderect(pg.Rect(ball['ballx1'], ball['bally1'], 10, 10)):
+                recall += 1
+                remove_note = True
+                note_remove_index = notes1.index(note)
+                remove_notes_indices.append(notes1.index(note))
+                remove_balls_indices.append(balls.index(ball))
+
+    for note in notes2:
+        note['y'] += note['speed']
+        pg.draw.line(screen, light_purple, (note['x1'], note['y']), (note['x2'], note['y']), 20)
+        note['rect'] = pg.Rect(note['x1'], note['y'], 20, 20)
+        for ball in balls:
+            if note['rect'].colliderect(pg.Rect(ball['ballx1'], ball['bally1'], 10, 10)):
+                remove_note = True
+                note_remove_index = notes2.index(note)
+                remove_notes_indices.append(notes2.index(note))
+                remove_balls_indices.append(balls.index(ball))
+
+    notes1 = [note for note in notes1 if note['y'] <= 550]
+    notes2 = [note for note in notes2 if note['y'] <= 550]
+
+    for ball_index in reversed(remove_balls_indices):
+        balls.pop(ball_index)
+
+    for note_index in reversed(remove_notes_indices):
+        notes1.pop(note_index)
+        notes2.pop(note_index)
+
+    for ball in balls:
+        pg.draw.circle(screen, light_purple, (ball['ballx1'], ball['bally1']), 10)
+
+    pg.display.flip()
+
+pg.quit()
+sys.exit()
