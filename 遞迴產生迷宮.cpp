@@ -1,15 +1,15 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
-#define width 10
-#define height 5
+#define width 20 
+#define height 10 
 char maze[2 * height + 1][2 * width + 1];
 int offsetX[4] = {-2, 2, 0, 0};
 int offsetY[4] = {0, 0, -2, 2};
-void initMaze(){//21*11
+void initMaze(){//41*21
 	
-	for(int i =0;i<11;i++){
-		for(int j=0;j<21;j++){
+	for(int i =0;i<21;i++){
+		for(int j=0;j<41;j++){
 			if(i%2==0||j%2==0)
 				maze[i][j] = '#';
 			else
@@ -18,7 +18,7 @@ void initMaze(){//21*11
 	}
 	maze[1][0] = ' ';
 	maze[1][1] = ' ';
-	maze[9][20] = ' ';
+	maze[19][40] = ' ';
 }
 
 void createMaze(int x,int y){
@@ -41,8 +41,8 @@ void createMaze(int x,int y){
 }
 
 void printMaze(){
-	for(int i =0;i<11;i++){
-		for(int j=0;j<21;j++){
+	for(int i =0;i<21;i++){
+		for(int j=0;j<41;j++){
 			printf("%c",maze[i][j]);
 		}
 		printf("\n");
