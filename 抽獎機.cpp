@@ -9,7 +9,7 @@ int main() {
     srand(time(0));  
 
     while (true) {
-        int r = 0, sr = 0, ssr = 0;
+        int r = 0, sr = 0, ssr = 0,ultra=0;
         cout << "單抽:1, 10連抽:2, 100連抽:3, 1000連抽:4" << endl << endl;
         cin >> input;
 
@@ -24,14 +24,15 @@ int main() {
 
         for (i = 0; i < iterations; i++) {
             randomnum[i] = rand() % (max - min + 1) + min;//生成0-999隨機一個數 
+            if(randomnum[i] ==0 )		ultra++;
             
-            if (randomnum[i] <= 10) 		ssr++;
+            else if (0< randomnum[i] && randomnum[i] <= 10) 		ssr++;
                 
             else if (10 < randomnum[i] && randomnum[i] < 100) 		sr++;//建議用&&連接兩個判斷式 
               
             else 		r++;
         }
-
+		cout << "ULTRA 有 " << ultra << " 張" << endl;
         cout << "SSR 有 " << ssr << " 張" << endl;
         cout << "SR  有 " << sr <<  " 張" << endl;
         cout << "R   有 " << r <<   " 張" << endl << endl;
