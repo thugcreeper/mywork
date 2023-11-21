@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcaea B30</title>
     <style>
-        .inline-container {
+        .inline-container{
             white-space: nowrap;
         }
 
@@ -46,11 +46,26 @@
     </div>
     <div class="inline-container">
         <h1 class="inline-text" style="font-size: 40px; color: gold;">B30average </h1>
-        <h1 class="inline-text" style="font-size: 40px; color: rgb(3, 150, 3);">= 11.655073</h1><br>
+        <h1 class="inline-text" style="font-size: 40px; color: rgb(3, 150, 3);">= 11.659296</h1><br>
         <p> </p>
     </div>
     <img src="https://truth.bahamut.com.tw/s01/201907/be2796de313e978d499fd38e3768a0ed.JPG" height="600" width="1040" alt="alternative text!!!">
     <p></p>
+<div class="inline-container">
+    <h2 class="inline-text">input song's </h2>
+    <h2 class="inline-text" style="color:red">score</h2>
+</div>
+<input type="number" value="輸入分數" id="score">
+<button onclick="getscore()">點我計算playptt</button>
+<p></p>
+<div class="inline-container">
+    <h2 class="inline-text">input song's </h2>
+    <h2 class="inline-text" style="color:#026ed9">constant</h2>
+</div>
+<input type="number" value="輸入定數" id="constant">
+<p id="output"></p>
+
+<script src="playpttcalcfunction.js"></script>
     <table>
         <tr style="font-size: 20px;">
             <th style =width:150px;>photo</th>
@@ -60,6 +75,15 @@
             <th style =width:150px;>score</th>
             <th style =width:150px;>playptt</th>
         </tr>
+        <!--below is song's info-->
+        <tr>
+            <td><img src="https://wiki.arcaea.cn/images/thumb/7/7b/Songs_grievouslady.jpg/384px-Songs_grievouslady.jpg" height="150" width="150" alt="alternative text!!!"></td>
+            <td>Grievous Lady</td>
+            <td class="ftr"><span class="difficulty-tag">FTR</span> 11</td>
+            <td>11.3</td>
+            <td>9711604</td>
+            <td>12.005347</td>
+        </tr>
         <tr>
             <td><img src="https://wiki.arcaea.cn/images/thumb/b/bd/Songs_ringedgenesis.jpg/150px-Songs_ringedgenesis.jpg" height="150" width="150" alt="alternative text!!!"></td>
             <td>Ringed Genesis</td>
@@ -67,14 +91,6 @@
             <td>10.8</td>
             <td>9835112</td>
             <td>11.975556</td>
-        </tr>
-        <tr>
-            <td><img src="https://wiki.arcaea.cn/images/thumb/7/7b/Songs_grievouslady.jpg/384px-Songs_grievouslady.jpg" height="150" width="150" alt="alternative text!!!"></td>
-            <td>Grievous Lady</td>
-            <td class="ftr"><span class="difficulty-tag">FTR</span> 11</td>
-            <td>11.3</td>
-            <td>9694291</td>
-            <td>11.947637</td>
         </tr>
         <tr>
             <td><img src="https://wiki.arcaea.cn/images/thumb/b/ba/Songs_halcyon.jpg/384px-Songs_halcyon.jpg" height="150" width="150" alt="alternative text!!!"></td>
@@ -221,6 +237,14 @@
             <td>11.556250</td>
         </tr>
         <tr>
+            <td><img src="https://wiki.arcaea.cn/images/thumb/b/bd/Songs_trapcrow.jpg/150px-Songs_trapcrow.jpg" height="150" width="150" alt="alternative text!!!"></td>
+            <td>Trap Crow</td>
+            <td class="ftr"><span class="difficulty-tag">FTR</span> 9+</td>
+            <td>9.9</td>
+            <td>9931105</td>
+            <td>11.555525</td>
+        </tr>
+        <tr>
             <td><img src="https://wiki.arcaea.cn/images/thumb/3/35/Songs_themessage.jpg/384px-Songs_themessage.jpg" height="150" width="150" alt="alternative text!!!"></td>
             <td>The Message</td>
             <td class="ftr"><span class="difficulty-tag">FTR</span> 9+</td>
@@ -261,7 +285,7 @@
             <td>11.550640</td>
         </tr>
         <tr>
-            <td><img src="https://wiki.arcaea.cn/images/thumb/3/31/Songs_nirvluce.jpg/384px-Songs_nirvluce.jpg" height="150" width="150" alt="alternative text!!!"></td>
+            <td><img src="https://wiki.arcaea.cn/images/thumb/3/31/Songs_nirvluce.jpg/150px-Songs_nirvluce.jpg" height="150" width="150" alt="alternative text!!!"></td>
             <td>Nirv lucE</td>
             <td class="ftr"><span class="difficulty-tag">FTR</span> 9+</td>
             <td>10.3</td>
@@ -292,14 +316,6 @@
             <td>9858031</td>
             <td>11.490155</td>
         </tr>
-        <tr>
-            <td><img src="https://wiki.arcaea.cn/images/thumb/b/b5/Songs_garakuta.jpg/150px-Songs_garakuta.jpg" height="150" width="150" alt="alternative text!!!"></td>
-            <td>Garakuta Doll Play</td>
-            <td class="ftr"><span class="difficulty-tag">FTR</span> 10</td>
-            <td>10.4</td>
-            <td>9817309</td>
-            <td>11.486545</td>
-        </tr>
-        </table>
+    </table>
     </body>
 </html>
