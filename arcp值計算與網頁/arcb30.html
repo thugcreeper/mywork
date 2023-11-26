@@ -5,52 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcaea B30</title>
     <style>
-        .inline-container{
-            white-space: nowrap;
-        }
-
+        .inline-container{ white-space: nowrap;}
+           
         .inline-text {
             display: inline;
+            position: relative;
+            animation-name: movingtext;
+            animation-duration: 2s;
         }
-        body{
-            background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+        @keyframes movingtext {
+            0%   {left:500px; top:0px;}
+            100% {left:0px; top:0px;}
+          }
+        .text1{
+            position: relative;
+            animation-name: m1;
+            animation-duration: 1s;
         }
-        table, th, tr, td {
-            border: 2px solid rgb(166, 97, 164);
-            border-radius: 10px;
+        @keyframes m1 {
+            0%   {top:500px;}
+            100% {top:0px;}
+          }
+        .text2{
+            position: relative;
+            animation-name: m1;
+            animation-duration: 1.5s;
         }
+        .text3{
+            position: relative;
+            animation-name: m1;
+            animation-duration: 2s;
+        }
+        .pttpic{    
+            animation-name: movingpic;
+            animation-duration: 2s;
+        }
+        @keyframes movingpic {
+            0%   {bottom:200px;}
+            100% {bottom:0px;}
+          }
+        body{background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);}
+
+        table, th, tr, td {border: 2px solid rgb(166, 97, 164); border-radius: 10px;}
+
+        th {color: rgba(0, 153, 255, 0.515); font-size: 20px;}     
         
-        th {
-            color: rgba(0, 153, 255, 0.515);
-            font-size: 20px;
-        }
+        td {font-family: Helvetica; color: black; font-size: 20px;}
 
-        td {
-            font-family: Helvetica;
-            color: black;
-            font-size: 20px;
-        }
-
-        .ftr {
-            color: rgb(192, 19, 192);
-        }
-
-        .byd {
-            color: rgb(255, 9, 9);
-        }
+        .ftr {color: rgb(192, 19, 192);}
+        .byd {color: rgb(255, 9, 9);}       
     </style>
 </head>
     <div class="inline-container">
-        <em><h1 class="inline-text" style="font-size: 100px;">Record My Playptt</h1></em>
+        <em><h1 class="inline-text text1" style="font-size: 100px;">Record </h1></em>
+        <em><h1 class="inline-text text2" style="font-size: 100px;">My </h1></em>
+        <em><h1 class="inline-text text3" style="font-size: 100px;">Playptt</h1></em>
         <em><h1 class="inline-text" style="font-size: 20px; float: right;font-family: Helvetica;">完成於2023.11.14</h1></em>
     </div>
     <div class="inline-container">
+        <p class="inline-text pttpic"><img src="https://arcwiki.mcd.blue/images/thumb/9/9a/Rating_4.png/75px-Rating_4.png"height="75" width="75"style="position: relative; left: 2px; top: 20px;" alt="alternative text!!!"></p>
         <h1 class="inline-text" style="font-size: 40px; color: gold;">B30average </h1>
-        <h1 class="inline-text" style="font-size: 40px; color: rgb(3, 150, 3);">= 11.659296</h1><br>
-        <p> </p>
+        <h1 class="inline-text" style="font-size: 40px; color: rgb(3, 150, 3);">= 11.661036</h1><br>
     </div>
-    <img src="https://truth.bahamut.com.tw/s01/201907/be2796de313e978d499fd38e3768a0ed.JPG" height="600" width="1040" alt="alternative text!!!">
-    <p></p>
+    <p><a href="https://arcwiki.mcd.blue/index.php?title=%E5%AE%9A%E6%95%B0%E8%A1%A8&variant=zh-tw" target="_blank">
+        <img src="https://truth.bahamut.com.tw/s01/201907/be2796de313e978d499fd38e3768a0ed.JPG" height="600" width="1040" alt="alternative text!!!"></a></p>
+         <!--click picture can open this web in a new web-->
 <div class="inline-container">
     <h2 class="inline-text">input song's </h2>
     <h2 class="inline-text" style="color:red">score</h2>
@@ -85,6 +104,14 @@
             <td>12.005347</td>
         </tr>
         <tr>
+            <td><img src="https://wiki.arcaea.cn/images/thumb/1/1a/Songs_fractureray.jpg/150px-Songs_fractureray.jpg" height="150" width="150" alt="alternative text!!!"></td>
+            <td>Fracture Ray</td>
+            <td class="ftr"><span class="difficulty-tag">FTR</span> 11</td>
+            <td>11.3</td>
+            <td>9703983</td>
+            <td>11.979943</td>
+        </tr>
+        <tr>
             <td><img src="https://wiki.arcaea.cn/images/thumb/b/bd/Songs_ringedgenesis.jpg/150px-Songs_ringedgenesis.jpg" height="150" width="150" alt="alternative text!!!"></td>
             <td>Ringed Genesis</td>
             <td class="ftr"><span class="difficulty-tag">FTR</span> 10+</td>
@@ -100,14 +127,7 @@
             <td>9846202</td>
             <td>11.931010</td>
         </tr>
-        <tr>
-            <td><img src="https://wiki.arcaea.cn/images/thumb/1/1a/Songs_fractureray.jpg/150px-Songs_fractureray.jpg" height="150" width="150" alt="alternative text!!!"></td>
-            <td>Fracture Ray</td>
-            <td class="ftr"><span class="difficulty-tag">FTR</span> 11</td>
-            <td>11.3</td>
-            <td>9688320</td>
-            <td>11.927733</td>
-        </tr>
+        
         <tr>
             <td><img src="https://wiki.arcaea.cn/images/thumb/9/93/Songs_cyaegha.jpg/150px-Songs_cyaegha.jpg" height="150" width="150" alt="alternative text!!!"></td>
             <td>Cyaegha</td>
@@ -117,7 +137,7 @@
             <td>11.883325</td>
         </tr>
         <tr>
-            <td><img src="https://wiki.arcaea.cn/images/thumb/c/c4/Songs_worldvanquisher.jpg/384px-Songs_worldvanquisher.jpg" height="150" width="150" alt="alternative text!!!"></td>
+            <td><img src="https://static.wikia.nocookie.net/iowiro/images/3/34/World_Vanquisher-jacket.jpg/revision/latest?cb=20230928090331" height="150" width="150" alt="alternative text!!!"></td>
             <td>World Vanquisher</td>
             <td class="ftr"><span class="difficulty-tag">FTR</span> 10+</td>
             <td>10.8</td>
@@ -237,7 +257,7 @@
             <td>11.556250</td>
         </tr>
         <tr>
-            <td><img src="https://wiki.arcaea.cn/images/thumb/b/bd/Songs_trapcrow.jpg/150px-Songs_trapcrow.jpg" height="150" width="150" alt="alternative text!!!"></td>
+            <td><img src="https://static.wikia.nocookie.net/iowiro/images/a/a6/Trap_Crow.jpg/revision/latest?cb=20230928000543" height="150" width="150" alt="alternative text!!!"></td>
             <td>Trap Crow</td>
             <td class="ftr"><span class="difficulty-tag">FTR</span> 9+</td>
             <td>9.9</td>
@@ -285,7 +305,7 @@
             <td>11.550640</td>
         </tr>
         <tr>
-            <td><img src="https://wiki.arcaea.cn/images/thumb/3/31/Songs_nirvluce.jpg/150px-Songs_nirvluce.jpg" height="150" width="150" alt="alternative text!!!"></td>
+            <td><img src="https://static.wikia.nocookie.net/iowiro/images/2/20/Nirv_lucE.jpg/revision/latest?cb=20230928072600" height="150" width="150" alt="alternative text!!!"></td>
             <td>Nirv lucE</td>
             <td class="ftr"><span class="difficulty-tag">FTR</span> 9+</td>
             <td>10.3</td>
