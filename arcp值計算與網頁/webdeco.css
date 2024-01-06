@@ -1,0 +1,49 @@
+.inline-container{ white-space: nowrap;}
+           
+        .inline-text {
+            display: inline;
+            position: relative;
+            animation-name: movingtext;
+            animation-duration: 2s;
+        }
+        @keyframes movingtext {
+            0%   {left:500px; top:0px;}
+            100% {left:0px; top:0px;}
+          }
+        .text1{
+            position: relative;
+            animation-name: m1;
+            animation-duration: 1s;
+        }
+        @keyframes m1 {
+            0%   {top:500px;}
+            100% {top:0px;}
+          }
+        .text2{
+            position: relative;
+            animation-name: m1;
+            animation-duration: 1.5s;
+        }
+        .text3{
+            position: relative;
+            animation-name: m1;
+            animation-duration: 2s;
+        }
+        .pttpic{    
+            animation-name: movingpic;
+            animation-duration: 2s;
+        }
+        @keyframes movingpic {
+            0%   {bottom:200px;}
+            100% {bottom:0px;}
+          }
+        body{background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);}
+
+        table, th, tr, td {border: 2px solid rgb(166, 97, 164); border-radius: 10px;}
+
+        th {color: rgba(0, 153, 255, 0.515); font-size: 20px;}     
+        
+        td {font-family: Helvetica; color: black; font-size: 20px;}
+
+        .ftr {color: rgb(192, 19, 192);}
+        .byd {color: rgb(255, 9, 9);}       

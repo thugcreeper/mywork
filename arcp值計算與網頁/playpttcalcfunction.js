@@ -13,7 +13,9 @@ function getscore() {
     else if(inputScore < 9800000 && inputScore>= 9500000) {
         result = (inputCons + (inputScore - 9500000) / 300000).toFixed(6);
     }
-
+    else if(inputScore < 9500000 && inputScore>= 9200000) {
+        result = (inputCons - (9500000 - inputScore) / 300000).toFixed(6);
+    }
     else
         var result ="沒救了";
         var outputElement = document.getElementById('output');
