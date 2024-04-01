@@ -1,0 +1,44 @@
+table{
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  border-radius: 5px;
+  width:75%
+}
+#final{
+  border:5px solid black;
+  border-radius: 20px;
+  height: 50px;
+  width:20%; 
+  background-color: #dbe8f2;
+  font-family: "Noto Serif TC", serif;
+  font-weight: bold;
+  font-style: normal; 
+  
+}
+th,td{
+  width:200px;
+  font-size: 20px;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 400;
+  font-style: normal;
+  border: 5px solid #dddddd;
+  padding: 8px;
+}
+.lastp{
+  font-family: "Noto Serif TC", serif;
+  font-size:25px;
+  font-style: normal; 
+}
+input[value="pickfood"] {/*針對pickfood操作*/
+  background-color: green; 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+tr:nth-child(even) {background-color: #76aef0;}
+tr:nth-child(odd) {background-color: #dbe8f2;}
+tr:hover {background-color: gray;}
