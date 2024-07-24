@@ -27,3 +27,4 @@ function getscore() {
 function getcons() {
     var inputCons = parseFloat(document.getElementById('constant').value);
 }
+

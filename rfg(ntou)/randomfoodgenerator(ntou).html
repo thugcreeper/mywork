@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>random food(ntou)</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><!--外部字體-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="randomfoodgenerator(ntou).css">
+<script src="randomfoodgenerator(ntou).js"></script>
+</head>
+
+<body>
+<h1>Generate Ramdom Food(<span style="color:darkblue">NTOU</span>)</h1>
+<table id="rests">
+<tr>
+    <th>店名</th>
+    <th>是否選擇</th>
+</tr>
+<tr>
+    <td>早點來</td>
+    <td><input type="checkbox" id="r1" name="choice" checked /><label for="r1">Choosed</label></td>
+</tr>
+<tr>
+    <td>啊man</td>
+    <td><input type="checkbox" id="r2" name="choice" checked /><label for="r2">Choosed</label></td>
+</tr>
+<tr>
+    <td>五味</td>
+    <td><input type="checkbox" id="r3" name="choice" checked /><label for="r3">Choosed</label></td>
+</tr>
+<tr>
+    <td>梁社漢</td>
+    <td><input type="checkbox" id="r1" name="choice" checked /><label for="r4">Choosed</label></td>
+</tr>
+<tr>
+    <td>八方</td>
+    <td><input type="checkbox" id="r2" name="choice" checked /><label for="r5">Choosed</label></td>
+</tr>
+<tr>
+    <td>打拋豬</td>
+    <td><input type="checkbox" id="r3" name="choice" checked /><label for="r6">Choosed</label></td>
+</tr>
+<tr>
+    <td>三媽</td>
+    <td><input type="checkbox" id="r1" name="choice" checked /><label for="r7">Choosed</label></td>
+</tr>
+<tr>
+    <td>佳汶麵食館</td>
+    <td><input type="checkbox" id="r2" name="choice" checked /><label for="r8">Choosed</label></td>
+</tr>
+<tr>
+    <td>永和豆漿</td>
+    <td><input type="checkbox" id="r3" name="choice" checked /><label for="r9">Choosed</label></td>
+</tr>
+<tr>
+    <td>金福燒臘</td>
+    <td><input type="checkbox" id="r1" name="choice" checked /><label for="r10">Choosed</label></td>
+</tr>
+<tr>
+    <td>五點鐘漢堡</td>
+    <td><input type="checkbox" id="r2" name="choice" checked /><label for="r11">Choosed</label></td>
+</tr>
+<tr>
+    <td>燈村號</td>
+    <td><input type="checkbox" id="r3" name="choice" checked /><label for="r12">Choosed</label></td>
+</tr>
+</table>
+
+<input class ="bigbtn" type="button" value="pickfood" onclick="givefood()"><br>
+<p class="lastp">final food:<br>
+<h1 id="final"></h1>
+</p>
+
+</body>
+</html>
