@@ -5,12 +5,13 @@ function getpics(){
         "https://arcwiki.mcd.blue/images/1/1a/Songs_fractureray.jpg?20180920015307",
         "https://arcwiki.mcd.blue/images/6/62/Songs_arghena.jpg?20230927113439",
         "https://arcwiki.mcd.blue/images/5/5a/Songs_abstrusedilemma.jpg?20230818012756",
-        "https://arcwiki.mcd.blue/images/4/4e/Songs_pragmatism_byd.jpg?20211209031946",
-        "https://arcwiki.mcd.blue/images/7/7b/Songs_saikyostronger.jpg?20200121184454",
-        "https://arcwiki.mcd.blue/images/8/89/Songs_dantalion.jpg?20200527100009",
+        "https://arcwiki.mcd.blue/images/4/4e/Songs_pragmatism_byd.jpg?20211209031946",         
+        "https://arcwiki.mcd.blue/images/7/7b/Songs_saikyostronger.jpg?20200121184454",             //>11.0
+        "https://arcwiki.mcd.blue/images/8/89/Songs_dantalion.jpg?20200527100009",                  //10.9
         "https://arcwiki.mcd.blue/images/b/be/Songs_ifi.jpg?20200527100831",
         "https://arcwiki.mcd.blue/images/8/8d/Songs_gou.jpg?20210121013955",
         "https://arcwiki.mcd.blue/images/8/88/Songs_chaos.jpg?20230628032418",
+        "https://arcwiki.mcd.blue/images/thumb/0/06/Songs_vulcanus.jpg/384px-Songs_vulcanus.jpg",    //10.9
         "https://arcwiki.mcd.blue/images/5/54/Songs_heavensdoor_byd.jpg?20211209032402",
         "https://arcwiki.mcd.blue/images/c/c4/Songs_worldvanquisher.jpg?20190523042229",
         "https://arcwiki.mcd.blue/images/b/bd/Songs_ringedgenesis.jpg?20190718024827",
@@ -19,12 +20,14 @@ function getpics(){
         "https://arcwiki.mcd.blue/images/b/ba/Songs_halcyon.jpg?20180926052220",
         "https://arcwiki.mcd.blue/images/9/93/Songs_cyaegha.jpg?20190321025238",
         "https://arcwiki.mcd.blue/images/c/cd/Songs_rekkaresonance.jpg?20210630103820",
-        "https://arcwiki.mcd.blue/images/3/3b/Songs_stasis_prs.jpg?20220428013815",
+        "https://arcwiki.mcd.blue/images/thumb/b/bb/Songs_invertedworld.jpg/384px-Songs_invertedworld.jpg",
+        "https://arcwiki.mcd.blue/images/d/dd/Songs_stasis.jpg?20220428013847",                     //10.7
         "https://arcwiki.mcd.blue/images/3/3c/Songs_cyanine.jpg?20180919052350",
         "https://arcwiki.mcd.blue/images/c/c2/Songs_gloryroad.jpg?20191008024412",
         "https://arcwiki.mcd.blue/images/2/2a/Songs_overwhelm.jpg?20210511111315",
         "https://arcwiki.mcd.blue/images/2/2b/Songs_manicjeer.jpg?20230302191939",
-        "https://arcwiki.mcd.blue/images/e/e6/Songs_unknownlevels.jpg?20230818013342",
+        "https://arcwiki.mcd.blue/images/thumb/e/e0/Songs_mvurbd.jpg/384px-Songs_mvurbd.jpg",
+        "https://arcwiki.mcd.blue/images/e/e6/Songs_unknownlevels.jpg?20230818013342",              //10.6
         "https://arcwiki.mcd.blue/images/d/d9/Songs_overdead.jpg?20210401010903",
         "https://arcwiki.mcd.blue/images/8/8b/Songs_trappola_byd.jpg?20230302012156",
         "https://arcwiki.mcd.blue/images/9/92/Songs_lastcelebration.jpg?20210121014142",
@@ -36,7 +39,8 @@ function getpics(){
         "https://arcwiki.mcd.blue/images/5/5b/Songs_wishuponasnow.jpg?20231201042817",
         "https://arcwiki.mcd.blue/images/a/a2/Songs_alephzero.jpg?20240308091629",
         "https://arcwiki.mcd.blue/images/1/1d/Songs_mirinae.jpg?20240325095854",
-        "https://arcwiki.mcd.blue/images/c/cc/Songs_ultradiaxon.jpg?20240402052436",
+        "https://arcwiki.mcd.blue/images/thumb/9/9b/Songs_rainofconflict.jpg/384px-Songs_rainofconflict.jpg",
+        "https://arcwiki.mcd.blue/images/c/cc/Songs_ultradiaxon.jpg?20240402052436",                //10.5
         "https://arcwiki.mcd.blue/images/6/6a/Songs_impact.jpg?20230323044714",
         "https://arcwiki.mcd.blue/images/b/b5/Songs_garakuta.jpg?20190523040551",
         "https://arcwiki.mcd.blue/images/6/6d/Songs_ikazuchi.jpg?20190523042035",
@@ -48,26 +52,28 @@ function getpics(){
         "https://arcwiki.mcd.blue/images/7/7f/Songs_chronicle.jpg?20230126032507",
         "https://arcwiki.mcd.blue/images/e/ee/Songs_lucidtraveler.jpg?20230628032502",
         "https://arcwiki.mcd.blue/images/6/61/Songs_riseoftheworld.jpg?20230818013127",
-        "https://arcwiki.mcd.blue/images/3/30/Songs_lethalvoltage.jpg?20240325094431",
+        "https://arcwiki.mcd.blue/images/3/30/Songs_lethalvoltage.jpg?20240325094431",              //10.4
         "https://arcwiki.mcd.blue/images/3/31/Songs_nirvluce.jpg?20180922040749",
         "https://arcwiki.mcd.blue/images/b/b2/Songs_etherstrike.jpg?20180919041652",
         "https://arcwiki.mcd.blue/images/4/41/Songs_izana.jpg?20200121193020",
-        "https://arcwiki.mcd.blue/images/2/2c/Songs_hiirogekka.jpg?20230302140802",
+        "https://arcwiki.mcd.blue/images/thumb/1/11/Songs_dualdoom.jpg/384px-Songs_dualdoom.jpg",
+        "https://arcwiki.mcd.blue/images/2/2c/Songs_hiirogekka.jpg?20230302140802",                 //10.3
         "https://arcwiki.mcd.blue/images/4/4e/Songs_conflict.jpg?20180919230008",
         "https://arcwiki.mcd.blue/images/d/d6/Songs_maliciousmischance.jpg?20200903172324",
         "https://arcwiki.mcd.blue/images/3/34/Songs_neowings.jpg?20220217001407",
         "https://arcwiki.mcd.blue/images/2/2b/Songs_medusa.jpg?20211224021439",
-        "https://arcwiki.mcd.blue/images/1/14/Songs_capella.jpg?20221222012045",
+        "https://arcwiki.mcd.blue/images/1/14/Songs_capella.jpg?20221222012045",                    //10.2
         "https://arcwiki.mcd.blue/images/f/f0/Songs_partyvinyl_byd.jpg?20221222012153",
         "https://arcwiki.mcd.blue/images/2/24/Songs_pragmatism.jpg?20180921114233",
         "https://arcwiki.mcd.blue/images/0/0f/Songs_sheriruth.jpg?20180926020312",
         "https://arcwiki.mcd.blue/images/1/15/Songs_trrricksters.jpg?20230323044831",
-        "https://arcwiki.mcd.blue/images/6/6e/Songs_logos.jpg?20231005151703",
+        "https://arcwiki.mcd.blue/images/6/6e/Songs_logos.jpg?20231005151703",                      //10.1
         "https://arcwiki.mcd.blue/images/2/2f/Songs_bookmaker_byd.jpg?20210630105036",
         "https://arcwiki.mcd.blue/images/c/c9/Songs_redandblueandgreen.jpg?20190401011627",
         "https://arcwiki.mcd.blue/images/a/a2/Songs_trappola.jpg?20180922004645",
         "https://arcwiki.mcd.blue/images/e/e9/Songs_viciousheroism.jpg?20231214165203",
-        "https://arcwiki.mcd.blue/images/a/a4/Songs_mirzam.jpg?20190907151235",
+        "https://arcwiki.mcd.blue/images/thumb/7/75/Songs_masqueradelegion.jpg/384px-Songs_masqueradelegion.jpg",
+        "https://arcwiki.mcd.blue/images/a/a4/Songs_mirzam.jpg?20190907151235",                     //10.0
         "https://arcwiki.mcd.blue/images/5/57/Songs_dement_byd.jpg?20200821004832",
         "https://arcwiki.mcd.blue/images/0/0b/Songs_laqryma_byd.jpg?20210630110949",
         "https://arcwiki.mcd.blue/images/e/ee/Songs_ignotusafterburn.jpg?20220709085155",
@@ -82,7 +88,7 @@ function getpics(){
         "https://arcwiki.mcd.blue/images/5/50/Songs_internetyamero.jpg?20230628032442",
         "https://arcwiki.mcd.blue/images/3/37/Songs_devillicsphere.jpg?20230628032430",
         "https://arcwiki.mcd.blue/images/5/5c/Songs_amekagura.jpg?20231005154138",
-        "https://arcwiki.mcd.blue/images/4/49/Songs_awakeninruins.jpg?20240325042735",
+        "https://arcwiki.mcd.blue/images/4/49/Songs_awakeninruins.jpg?20240325042735",              //9.9
         "https://arcwiki.mcd.blue/images/6/68/Songs_morningloom.jpg?20240325033650",
         "https://arcwiki.mcd.blue/images/6/60/Songs_goodtek_byd.jpg?20200530124452",
         "https://arcwiki.mcd.blue/images/a/a7/Songs_lostcivilization_byd.jpg?20210511143729",
@@ -105,7 +111,9 @@ function getpics(){
         "https://arcwiki.mcd.blue/images/4/45/Songs_oldschoolsalvage.jpg?20240530121314",
         "https://arcwiki.mcd.blue/images/f/fb/Songs_innocence.jpg?20240309015456",
         "https://arcwiki.mcd.blue/images/4/4b/Songs_qualia_byd.jpg?20211209004051",
-        "https://arcwiki.mcd.blue/images/c/cb/Songs_oblivia_byd.jpg?20240125040726",
+        "https://arcwiki.mcd.blue/images/thumb/0/05/Songs_distortionhuman.jpg/384px-Songs_distortionhuman.jpg",
+        "https://arcwiki.mcd.blue/images/c/cb/Songs_oblivia_byd.jpg?20240125040726",                
+        "https://arcwiki.mcd.blue/images/thumb/7/72/Songs_waltzforlorelei.jpg/150px-Songs_waltzforlorelei.jpg",//9.8
         "https://arcwiki.mcd.blue/images/3/35/Songs_themessage.jpg?20180920041902",
         "https://arcwiki.mcd.blue/images/0/00/Songs_sulfur.jpg?20180926163317",
         "https://arcwiki.mcd.blue/images/9/99/Songs_supernova.jpg?20190502122216",
@@ -120,7 +128,8 @@ function getpics(){
         "https://arcwiki.mcd.blue/images/c/c5/Songs_ultimatetaste.jpg?20230719083732",
         "https://arcwiki.mcd.blue/images/d/da/Songs_sacrifice.jpg?20230818013257",
         "https://arcwiki.mcd.blue/images/0/09/Songs_rgb.jpg?20230818012947",
-        "https://arcwiki.mcd.blue/images/0/08/Songs_hotarubinoyuki.jpg?20240112064014",
+        "https://arcwiki.mcd.blue/images/0/08/Songs_hotarubinoyuki.jpg?20240112064014",             //9.7
+        "https://arcwiki.mcd.blue/images/thumb/6/67/Songs_epitaxy.jpg/150px-Songs_epitaxy.jpg",
         "https://arcwiki.mcd.blue/images/9/99/Songs_infinityheaven_byd.jpg?20200530124747",
         "https://arcwiki.mcd.blue/images/f/f6/Songs_purgatorium_byd.jpg?20200821004155",
         "https://arcwiki.mcd.blue/images/4/4a/Songs_quon.jpg?20180926163123",
