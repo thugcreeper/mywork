@@ -51,15 +51,25 @@
             border: 3px solid white;
             border-radius: 10px;
         }
-        .randompic{
-            width:400px;
+
+        .arcsticker {
+            width: 165px;
+            height: 165px;
+            border: 3px solid white;
+            border-radius: 10px;
+            position: absolute;
+            top: 895px;     /* Distance from the top of the parent container */
+            left: 890px;    /* Distance from the left of the parent container */
+        }     
+        .note {
+            width: 400px;
+            height: 235px;
             padding: 10px;
             border: 3px solid white;
             border-radius: 10px;
         }
-        .note{
+        .randompic{
             width:400px;
-            height:235px;
             padding: 10px;
             border: 3px solid white;
             border-radius: 10px;
