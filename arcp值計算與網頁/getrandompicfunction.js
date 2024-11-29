@@ -11,7 +11,8 @@ function getpics(){
         "https://arcwiki.mcd.blue/images/b/be/Songs_ifi.jpg?20200527100831",
         "https://arcwiki.mcd.blue/images/8/8d/Songs_gou.jpg?20210121013955",
         "https://arcwiki.mcd.blue/images/8/88/Songs_chaos.jpg?20230628032418",
-        "https://arcwiki.mcd.blue/images/thumb/0/06/Songs_vulcanus.jpg/384px-Songs_vulcanus.jpg",    //10.9
+        "https://arcwiki.mcd.blue/images/thumb/0/06/Songs_vulcanus.jpg/384px-Songs_vulcanus.jpg",    //10.8
+        "https://arcwiki.mcd.blue/images/thumb/0/0e/Songs_distortedfate.jpg/135px-Songs_distortedfate.jpg",
         "https://arcwiki.mcd.blue/images/5/54/Songs_heavensdoor_byd.jpg?20211209032402",
         "https://arcwiki.mcd.blue/images/c/c4/Songs_worldvanquisher.jpg?20190523042229",
         "https://arcwiki.mcd.blue/images/b/bd/Songs_ringedgenesis.jpg?20190718024827",
@@ -40,6 +41,7 @@ function getpics(){
         "https://arcwiki.mcd.blue/images/a/a2/Songs_alephzero.jpg?20240308091629",
         "https://arcwiki.mcd.blue/images/1/1d/Songs_mirinae.jpg?20240325095854",
         "https://arcwiki.mcd.blue/images/thumb/9/9b/Songs_rainofconflict.jpg/384px-Songs_rainofconflict.jpg",
+        "https://arcwiki.mcd.blue/images/thumb/d/d7/Songs_spiritdauntless.jpg/384px-Songs_spiritdauntless.jpg",
         "https://arcwiki.mcd.blue/images/c/cc/Songs_ultradiaxon.jpg?20240402052436",                //10.5
         "https://arcwiki.mcd.blue/images/6/6a/Songs_impact.jpg?20230323044714",
         "https://arcwiki.mcd.blue/images/b/b5/Songs_garakuta.jpg?20190523040551",
@@ -128,7 +130,8 @@ function getpics(){
         "https://arcwiki.mcd.blue/images/c/c5/Songs_ultimatetaste.jpg?20230719083732",
         "https://arcwiki.mcd.blue/images/d/da/Songs_sacrifice.jpg?20230818013257",
         "https://arcwiki.mcd.blue/images/0/09/Songs_rgb.jpg?20230818012947",
-        "https://arcwiki.mcd.blue/images/0/08/Songs_hotarubinoyuki.jpg?20240112064014",             //9.7
+        "https://arcwiki.mcd.blue/images/0/08/Songs_hotarubinoyuki.jpg?20240112064014",  
+        "https://arcwiki.mcd.blue/images/thumb/e/ea/Songs_hailstone.jpg/150px-Songs_hailstone.jpg",          //9.7
         "https://arcwiki.mcd.blue/images/thumb/6/67/Songs_epitaxy.jpg/150px-Songs_epitaxy.jpg",
         "https://arcwiki.mcd.blue/images/9/99/Songs_infinityheaven_byd.jpg?20200530124747",
         "https://arcwiki.mcd.blue/images/f/f6/Songs_purgatorium_byd.jpg?20200821004155",
@@ -140,6 +143,7 @@ function getpics(){
         "https://arcwiki.mcd.blue/images/1/19/Songs_avantraze.jpg?20191208182655",
         "https://arcwiki.mcd.blue/images/b/b1/Songs_stratoliner.jpg?20231130113601",
         "https://arcwiki.mcd.blue/images/a/a2/Songs_aloneandlorn.jpg?20231201042741",
+        "https://arcwiki.mcd.blue/images/thumb/1/11/Songs_astralexe.jpg/135px-Songs_astralexe.jpg",
         "https://arcwiki.mcd.blue/images/4/4f/Songs_jingle.jpg?20240309042155",
         "https://arcwiki.mcd.blue/images/8/8c/Songs_fairytale_byd.jpg?20200530124357",
         "https://arcwiki.mcd.blue/images/3/32/Songs_specta.jpg?20180925041510",
