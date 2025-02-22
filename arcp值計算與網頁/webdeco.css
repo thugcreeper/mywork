@@ -23,6 +23,10 @@
             0%   {top:500px;}
             100% {top:0px;}
           }
+        @keyframes modal_ani{
+            from{width:0%;height:0%;opacity:0}
+            to  {width:40%;height:30%;opacity:1}
+        }
         .text2{
             position: relative;
             animation-name: m1;
@@ -41,45 +45,90 @@
             0%   {bottom:200px;}
             100% {bottom:0px;}
           }
+          /* Common styles for input fields */
+        input[type="number"] {
+            width: 150px;
+            padding: 5px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        input[type="number"]:focus {
+            width:200px;
+            background-color: #e0c3fc;
+            transition: width 0.4s ease-in-out;
+        }
+        /* Styles for the button */
+        button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker green when hovered */
+        }
         div.aligndiv div {/*讓 .aligndiv 內部的所有 <div> 元素都浮動到左邊*/
             float: left;
         }
         .arcwikilink{
-            width:1040px;
-            height: 765px;
+            width:1070px;
+            height: 825.5px;
             padding: 10px;
             border: 3px solid white;
             border-radius: 10px;
+            box-sizing: border-box;/*ensure height = 825.5px*/
         }
 
         .arcsticker {
-            width: 165px;
-            height: 165px;
+            width: 180px;
+            height: 180px;
             border: 3px solid white;
             border-radius: 10px;
             position: absolute;
-            top: 895px;     /* Distance from the top of the parent container */
-            left: 890px;    /* Distance from the left of the parent container */
+            top: 910px;     /* Distance from the top of the parent container */
+            left: 880px;    /* Distance from the left of the parent container */
         }     
         .note {
-            width: 400px;
-            height: 235px;
+            width: 420px;
+            height: 225.5px;
             padding: 10px;
             border: 3px solid white;
             border-radius: 10px;
+            box-sizing: border-box;
         }
         .randompic{
-            width:400px;
+            width:420px;
             padding: 10px;
+            height:600px;
             border: 3px solid white;
             border-radius: 10px;
+            box-sizing: border-box;
+        }
+        #output{
+            height: 30px; 
+            width: 0%; 
+            background-color: none; 
+            text-align: left; 
+            line-height: 30px;
+            border-radius: 5px; 
+            color: black;
         }
         .showptt{
+            margin-top: 5px;
             width: 250px;
-            height:20px;
-            padding:5px;
+            height:30px;
             border: 3px solid gray;
             border-radius: 10px;
+            overflow: hidden;
         }
         body{
             animation-name: changebackcolor;
@@ -91,6 +140,14 @@
             border: 3px solid rgb(166, 97, 164); 
             border-radius: 10px;
             text-align: center;
+            transition: all 0.3s ease;
+            
+        } 
+        
+        td:hover {
+            font-family: fantasy;
+            font-size: 30px;
+            background-clip: text;
         }
 
         th {color: rgba(0, 153, 255, 0.515); font-size: 20px;}     
@@ -111,3 +168,100 @@
         .etr {color:rgb(189, 143, 195)}
         .ftr {color: rgb(192, 19, 192);}
         .byd {color: rgb(255, 9, 9);}       
+        .footer {
+            text-align: center; /* 文字對齊方式 */
+            font-size: 14px; /* 字體大小 */
+            color: #333; /* 字體顏色 */
+            border-top: 1px solid #ccc; /* 上邊框 */
+            bottom: 0; /* 底部距離 */
+            width: auto; /* 寬度 */
+            margin-top:20px;
+        }
+        /*footer's navigation bar*/
+        .horizontal ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .horizontal li {
+            display: flex;
+            justify-content: center; /* Center horizontally when using flex*/
+            align-items: center;     /* Center vertically */
+            position: relative;
+            float: left;
+            width: 25%;
+            height: 30px;
+            background-color: #9aa0b7;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: x-large;
+            color:brown;
+            padding: 5px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            
+        }
+        #nav_about{
+            background-color: navy; 
+            color: #ffffff; 
+        }
+        /*footer's navigation bar*/
+
+        /* web version Modal  */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+          }
+
+        .modal_content {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            background-color: #fefefe;
+            padding: 20px;
+            border: 1px solid #888;
+            width:40%;
+            height:30%;
+            margin:auto;
+            animation-name: modal_ani;
+            animation-duration: 0.4s
+        }
+        .modal_content p {
+            width: 40%; /* 每個段落寬度 */
+            margin: 0 10px; /* 左右邊距 */
+            text-align: center; /* 文字居中 */
+        }
+        #web_description{
+            color:brown;
+            text-align:left;
+            text-indent: 50px;/*縮排"*/
+            letter-spacing: 2px;
+            padding:90px;
+        }    
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        }
