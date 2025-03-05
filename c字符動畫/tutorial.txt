@@ -1,0 +1,1 @@
+用potplayer逐偵擷取畫面，然後ascgen batch processing全部轉換成txt至outputfile，然後ctrl+a，對第一個txt改名成"(0)"
