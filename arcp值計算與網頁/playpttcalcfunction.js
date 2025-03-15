@@ -75,6 +75,7 @@ function updateProgressBar(ptt,inputScore) {
     bar.innerText = "your playptt:" + ptt;
 }
 
+
 function start(){
     // Get the modal
     let web_description = document.getElementsByClassName("modal")[0];
