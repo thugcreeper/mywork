@@ -38,6 +38,8 @@
 
         <div class="actions">
             <button class="btn btn-add" onclick="addRow()">＋ 新增股票</button>
+            <label class="btn btn-upload" for="json-upload">📂 匯入 JSON</label>
+            <input type="file" id="json-upload" accept=".json" style="display:none" onchange="importJSON(event)">
             <button class="btn btn-github" onclick="saveToGitHub()">💾 儲存到 GitHub</button>
         </div>
 

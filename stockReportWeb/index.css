@@ -168,3 +168,9 @@ td select.error {
     font-size: 14px;
     line-height: 1.6;
 }
+
+.btn-upload {
+    background: #8e44ad;
+    color: white;
+    cursor: pointer;
+}

@@ -203,3 +203,42 @@ function closeModal() {
     document.getElementById('modal-overlay').style.display = 'none';
     document.getElementById('modal').style.display = 'none';
 }
+// ==================== 匯入 JSON ====================
+function importJSON(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+        try {
+            const parsed = JSON.parse(e.target.result);
+
+            // 驗證格式
+            if (!Array.isArray(parsed)) throw new Error('JSON 必須是陣列格式');
+            for (const s of parsed) {
+                if (!s.stock_id || !s.stock_name || s.avg_price === undefined || !s.market) {
+                    throw new Error('每筆資料需包含 stock_id、stock_name、avg_price、market 欄位');
+                }
+                if (!['twse', 'tpex'].includes(s.market)) {
+                    throw new Error(`market 只能是 twse 或 tpex，目前有：${s.market}`);
+                }
+            }
+
+            stocks = parsed.map(s => ({
+                stock_id: String(s.stock_id).trim(),
+                stock_name: String(s.stock_name).trim(),
+                avg_price: parseFloat(s.avg_price),
+                market: s.market
+            }));
+
+            renderTable();
+            setStatus(`已匯入 ${stocks.length} 支股票，確認無誤後請按「儲存到 GitHub」`, 'green');
+        } catch (err) {
+            showModal('匯入失敗：' + err.message);
+        }
+
+        // 清空 input，允許重複上傳同一個檔案
+        event.target.value = '';
+    };
+    reader.readAsText(file);
+}
