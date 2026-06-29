@@ -38,12 +38,17 @@ async function loadFromGitHub() {
         if (!res.ok) throw new Error(`GitHub API 錯誤：${res.status}`);
 
         const data = await res.json();
-        stocks = JSON.parse(atob(data.content));
+
+        // 使用 decodeURIComponent(escape(atob(...))) 解決中文亂碼問題
+        const decodedContent = decodeURIComponent(escape(atob(data.content)));
+        stocks = JSON.parse(decodedContent);
+
         localStorage.setItem('gh_sha', data.sha);
         renderTable();
-        showModal(`載入成功，共 ${stocks.length} 支股票`);
+
+        showModal(`載入成功，共 ${stocks.length} 支股票`, 'success');
     } catch (e) {
-        showModal('載入失敗：' + e.message);
+        showModal('載入失敗：' + e.message, 'error');
     }
 }
 
@@ -178,9 +183,9 @@ async function saveToGitHub() {
 
         const data = await res.json();
         localStorage.setItem('gh_sha', data.content.sha);
-        showModal('已成功儲存到 GitHub ✓，下次 Actions 執行時將套用新清單');
+        showModal('已成功儲存到 GitHub ✓，下次 Actions 執行時將套用新清單', 'success');
     } catch (e) {
-        showModal('儲存失敗：' + e.message);
+        showModal('儲存失敗：' + e.message, 'error');
     }
 }
 
@@ -234,7 +239,7 @@ function importJSON(event) {
             renderTable();
             setStatus(`已匯入 ${stocks.length} 支股票，確認無誤後請按「儲存到 GitHub」`, 'green');
         } catch (err) {
-            showModal('匯入失敗：' + err.message);
+            showModal('匯入失敗：' + err.message, 'error');
         }
 
         // 清空 input，允許重複上傳同一個檔案
