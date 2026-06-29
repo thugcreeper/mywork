@@ -41,9 +41,9 @@ async function loadFromGitHub() {
         stocks = JSON.parse(atob(data.content));
         localStorage.setItem('gh_sha', data.sha);
         renderTable();
-        setStatus(`載入成功，共 ${stocks.length} 支股票`, 'green');
+        showModal(`載入成功，共 ${stocks.length} 支股票`, 'green');
     } catch (e) {
-        setStatus('載入失敗：' + e.message, 'red');
+        showModal('載入失敗：' + e.message, 'red');
     }
 }
 
@@ -152,14 +152,14 @@ function clearError(input) {
 async function saveToGitHub() {
     const token = getToken();
     const sha = localStorage.getItem('gh_sha');
-    if (!token) { setStatus('請先設定 Token', 'red'); return; }
-    if (stocks.length === 0) { setStatus('持股清單不能為空', 'red'); return; }
-    if (!validateAll()) { setStatus('請修正上方錯誤後再儲存', 'red'); return; }
+    if (!token) { showModal('請先設定 Token', 'red'); return; }
+    if (stocks.length === 0) { showModal('持股清單不能為空', 'red'); return; }
+    if (!validateAll()) { showModal('請修正上方錯誤後再儲存', 'red'); return; }
 
     try {
         setStatus('儲存中...', 'gray');
         const content = btoa(unescape(encodeURIComponent(JSON.stringify(stocks, null, 2))));
-        const res = await fetch(`https://api.github.com/repos/${REPO}/contents/stocks.json`, {
+        const res = await fetch(`https://api.github.com/repos/${REPO}/src/stocks.json`, {
             method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -178,9 +178,9 @@ async function saveToGitHub() {
 
         const data = await res.json();
         localStorage.setItem('gh_sha', data.content.sha);
-        setStatus('已成功儲存到 GitHub ✓，下次 Actions 執行時將套用新清單', 'green');
+        showModal('已成功儲存到 GitHub ✓，下次 Actions 執行時將套用新清單', 'green');
     } catch (e) {
-        setStatus('儲存失敗：' + e.message, 'red');
+        showModal('儲存失敗：' + e.message, 'red');
     }
 }
 
@@ -189,4 +189,17 @@ function setStatus(msg, color) {
     const el = document.getElementById('status-bar');
     el.textContent = msg;
     el.style.color = color;
+}
+// ==================== Modal ====================
+function showModal(msg, type = 'error') {
+    const icon = type === 'error' ? '❌' : '✅';
+    document.getElementById('modal-icon').textContent = icon;
+    document.getElementById('modal-msg').textContent = msg;
+    document.getElementById('modal-overlay').style.display = 'block';
+    document.getElementById('modal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('modal-overlay').style.display = 'none';
+    document.getElementById('modal').style.display = 'none';
 }
