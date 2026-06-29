@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>持股清單編輯</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>📈 持股清單編輯</h2>
+
+        <div class="token-section">
+            <label>GitHub Personal Access Token</label>
+            <div class="token-row">
+                <input type="password" id="gh-token" placeholder="ghp_xxxx...">
+                <button class="btn btn-save" onclick="saveToken()">儲存</button>
+            </div>
+        </div>
+
+        <div id="status-bar"></div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>股票代號</th>
+                    <th>股票名稱</th>
+                    <th>均價（元）</th>
+                    <th>市場</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="stock-table"></tbody>
+        </table>
+
+        <div class="actions">
+            <button class="btn btn-add" onclick="addRow()">＋ 新增股票</button>
+            <button class="btn btn-github" onclick="saveToGitHub()">💾 儲存到 GitHub</button>
+        </div>
+
+        <div class="guide">
+            <h3>📖 操作說明</h3>
+            <ol>
+                <li>首次使用請填入 GitHub Token 並按儲存，Token 僅存在瀏覽器本地，不會上傳。</li>
+                <li>頁面載入時會自動從 GitHub 讀取目前持股清單。</li>
+                <li>新增、修改、刪除完成後按「儲存到 GitHub」，Actions 下次執行時就會套用新清單。</li>
+            </ol>
+            <h3>⚠️ 填寫注意事項</h3>
+            <ul>
+                <li><strong>股票代號</strong>是識別唯一股票的依據，請務必正確填寫，填錯會導致法人資料抓不到（報告顯示「無資料」但不會報錯）。</li>
+                <li>代號格式：4〜6碼，只能含數字和英文字母（例如：2330、00878、00981B）。</li>
+                <li>均價請填寫你的實際持股成本，單位為元。</li>
+                <li>上市選 twse，上櫃選 tpex。</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
