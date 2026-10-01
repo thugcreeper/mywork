@@ -1,4 +1,4 @@
-function getpics(){
+function fallbackRandomPic(){
     const songpics = [
         "https://res.cloudinary.com/decbhjtj4/image/upload/f_auto,q_auto/99Glooms",
         "https://res.cloudinary.com/decbhjtj4/image/upload/f_auto,q_auto/AetherCrest",
@@ -222,5 +222,60 @@ function getpics(){
     ];
 
     const randomIndex = Math.floor(Math.random() * songpics.length);
-    document.getElementById('randompic').src = songpics[randomIndex];
+    const randomImage = document.getElementById('randompic');
+    randomImage.onerror = null;
+    randomImage.src = songpics[randomIndex];
+    randomImage.alt = "Fallback Arcaea song cover";
+}
+
+async function getpics() {
+    const randomImage = document.getElementById('randompic');
+    const wikiApiUrl = "https://wiki.arcaea.cn/api.php?action=parse&page=%E6%9B%B2%E7%9B%AE%E5%88%97%E8%A1%A8&prop=text&format=json&origin=*";
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 3500);
+
+    try {
+        const response = await fetch(wikiApiUrl, { signal: controller.signal });
+        if (!response.ok) throw new Error(`Wiki request failed: ${response.status}`);
+
+        const payload = await response.json();
+        const wikiHtml = payload?.parse?.text?.["*"];
+        if (!wikiHtml) throw new Error("Wiki response has no song list HTML");
+
+        const documentFragment = new DOMParser().parseFromString(wikiHtml, "text/html");
+        const songRows = Array.from(documentFragment.querySelectorAll(
+            'table.song-list-table[data-song-list-platform="mobile"] tbody tr'
+        ));
+        const songs = songRows.map(row => {
+            const titleLink = row.cells[1]?.querySelector("a[href]");
+            const cover = row.cells[0]?.querySelector("img[src]");
+            if (!titleLink || !cover) return null;
+
+            return {
+                title: titleLink.textContent.trim(),
+                image: new URL(
+                    cover.getAttribute("src").replace("/75px-", "/300px-"),
+                    "https://wiki.arcaea.cn"
+                ).href
+            };
+        }).filter(Boolean);
+
+        if (!songs.length) throw new Error("Wiki song list is empty");
+
+        const song = songs[Math.floor(Math.random() * songs.length)];
+        randomImage.onerror = () => {
+            randomImage.onerror = null;
+            fallbackRandomPic();
+        };
+        randomImage.src = song.image;
+        randomImage.alt = `Arcaea song cover: ${song.title}`;
+        console.log("Random Wiki song:", song.title);
+    }
+    catch (error) {
+        console.warn("Wiki random song unavailable, using fallback images:", error);
+        fallbackRandomPic();
+    }
+    finally {
+        clearTimeout(timeoutId);
+    }
 }

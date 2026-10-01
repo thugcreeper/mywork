@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="shortcut icon" href=".\assets\webicon.ico" type="image/x-icon">
@@ -7,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcaea B30</title>
     <link rel="stylesheet" type="text/css" href=".\css\webdeco.css">
- </head>
+</head>
+
 <body>
     <header class="site-header">
         <div class="title-group">
@@ -26,8 +28,10 @@
     <main>
         <section class="tool-layout">
             <div class="arcwikilink">
-                <a href="https://arcwiki.mcd.blue/index.php?title=%E5%AE%9A%E6%95%B8%E8%A1%A8&variant=zh-tw" target="_blank" rel="noopener">
-                    <img src="https://truth.bahamut.com.tw/s01/201907/be2796de313e978d499fd38e3768a0ed.JPG" alt="Arcaea constant table">
+                <a href="https://arcwiki.mcd.blue/index.php?title=%E5%AE%9A%E6%95%B8%E8%A1%A8&variant=zh-tw"
+                    target="_blank" rel="noopener">
+                    <img src="https://truth.bahamut.com.tw/s01/201907/be2796de313e978d499fd38e3768a0ed.JPG"
+                        alt="Arcaea constant table">
                 </a>
                 <div class="calculator-form">
                     <h2>input song's <span class="score-label">score</span></h2>
@@ -37,7 +41,14 @@
                     </div>
                     <h2>input song's <span class="constant-label">constant</span></h2>
                     <input type="number" id="constant" min="1.0" max="12.0" step="0.1" value="10.0">
-                    <div class="showptt"><div id="output"></div></div>
+                    <div class="showptt">
+                        <div id="output"></div>
+                    </div>
+                    <div class="arcsticker">
+                        <a href="https://arcst.yurisaki.top/" target="_blank" rel="noopener">
+                            <img src="./assets/sticker.png" alt="Arcaea sticker">
+                        </a>
+                    </div>
                 </div>
                 <div class="searchbar">
                     <h2>search song</h2>
@@ -51,16 +62,11 @@
                         <button onclick="searchFunction()">Search</button>
                     </div>
                 </div>
-                <div class="arcsticker">
-                    <a href="https://arcst.yurisaki.top/" target="_blank" rel="noopener">
-                        <img src=".\assets\sticker.png" alt="Arcaea sticker">
-                    </a>
-                </div>
             </div>
             <div class="tool-side">
                 <div class="randompic">
                     <h2>Recommend me a song</h2>
-                    <img id="randompic" src="https://www.collinsdictionary.com/images/full/dice_393025615_1000.jpg" alt="Recommended song cover">
+                    <img id="randompic" src="./assets/random_song_default.png" alt="Random song default">
                     <button onclick="getpics()">Let's gooooo!!!</button>
                 </div>
                 <aside class="note">
@@ -73,19 +79,25 @@
         <section class="table-section">
             <div class="table-scroll">
                 <table id="playpttTable">
-        <thead>
-        <tr style="font-size: 20px;">
-            <th style ="width:150px;"><span class="header-text">Photo</span> <span class="arrow"></span></th>
-            <th style ="width:300px;"><span class="header-text">Song</span> <span class="arrow"></span></th>
-            <th style ="width:150px;"onclick="sortTable(2,this)"><span class="header-text">Difficulty</span> <span class="arrow"></span></th>
-            <th style ="width:150px;"onclick="sortTable(3,this)"><span class="header-text">Constant</span> <span class="arrow"></span></th>
-            <th style ="width:160px;"onclick="sortTable(4,this)"><span class="header-text">Score</span> <span class="arrow"></span></th>
-            <th style ="width:150px;"onclick="sortTable(5,this)"><span class="header-text">PlayPTT</span> <span class="arrow"></span></th>
-        </tr>
-        </thead>
-        <!--below is song's info-->
-        <tbody>
-        </tbody>
+                    <thead>
+                        <tr style="font-size: 20px;">
+                            <th style="width:150px;"><span class="header-text">Photo</span> <span class="arrow"></span>
+                            </th>
+                            <th style="width:300px;"><span class="header-text">Song</span> <span class="arrow"></span>
+                            </th>
+                            <th style="width:150px;" onclick="sortTable(2,this)"><span
+                                    class="header-text">Difficulty</span> <span class="arrow"></span></th>
+                            <th style="width:150px;" onclick="sortTable(3,this)"><span
+                                    class="header-text">Constant</span> <span class="arrow"></span></th>
+                            <th style="width:160px;" onclick="sortTable(4,this)"><span class="header-text">Score</span>
+                                <span class="arrow"></span></th>
+                            <th style="width:150px;" onclick="sortTable(5,this)"><span
+                                    class="header-text">PlayPTT</span> <span class="arrow"></span></th>
+                        </tr>
+                    </thead>
+                    <!--below is song's info-->
+                    <tbody>
+                    </tbody>
                 </table>
             </div>
         </section>
@@ -98,9 +110,9 @@
                     <div id="web_description_modal" class="modal">
                         <p class="modal_content" id="web_description">
                             I design this website due to a course(An introduction to computer science.)
-                            but at that time I didn't understand HTML,CSS and Javascript well,the website 
+                            but at that time I didn't understand HTML,CSS and Javascript well,the website
                             actually has some problem,but I don't care then,and this website's architecture
-                            remain the same for a long time.Until 2025's winter vacation,I begin to learn 
+                            remain the same for a long time.Until 2025's winter vacation,I begin to learn
                             website design more thoroughly,so I changed a lot of code of this web,and add
                             more function,decoration and so on.
                         </p>
@@ -108,26 +120,27 @@
                 </li>
                 <li id="web_version" class="tooltip">web version
                     <span class="tooltip_content">web version</span>
-                    <div id="web_history_modal"class="modal">
+                    <div id="web_history_modal" class="modal">
                         <p class="modal_content">first version:<br>
                             complete: 2023/11/14<br>
-                            title annimation 	&#x2705<br><!-- emoji -->
-                            playptt calc        &#x2705<br>
-                            song's link         &#x2705
+                            title annimation &#x2705<br><!-- emoji -->
+                            playptt calc &#x2705<br>
+                            song's link &#x2705
                         </p>
                         <p class="modal_content">latest version:<br>
                             complete: 2025/2/20<br>
-                            better layout               &#x2705<br>
-                            random song                 &#x2705<br>
-                            more javascript and css     &#x2705<br>
-                            Navgation_bar               &#x2705<br>
-                            New Songs                   &#x2705
+                            better layout &#x2705<br>
+                            random song &#x2705<br>
+                            more javascript and css &#x2705<br>
+                            Navgation_bar &#x2705<br>
+                            New Songs &#x2705
                         </p>
                     </div>
                 </li>
-                <li class="tooltip"><a href="https://github.com/thugcreeper/mywork/tree/main/arcp%E5%80%BC%E8%A8%88%E7%AE%97%E8%88%87%E7%B6%B2%E9%A0%81" 
-                    style="text-decoration:none;color:brown;">
-                    source code</a><span class="tooltip_content">source code</span></li>
+                <li class="tooltip"><a
+                        href="https://github.com/thugcreeper/mywork/tree/main/arcp%E5%80%BC%E8%A8%88%E7%AE%97%E8%88%87%E7%B6%B2%E9%A0%81"
+                        style="text-decoration:none;color:brown;">
+                        source code</a><span class="tooltip_content">source code</span></li>
                 <li class="tooltip">others<span class="tooltip_content">others</span></li>
             </ul>
         </div>
@@ -141,9 +154,10 @@
     <script src="./js/playpttcalcfunction.js"></script>
     <script src="./js/getrandompicfunction.js"></script>
 </body>
+
 </html>
-    
-    <!--
+
+<!--
     <tr>
         <td><a href="https://arcwiki.mcd.blue/UNKNOWN_LEVELS" target="_blank"><img src="https://arcwiki.mcd.blue/images/thumb/e/e6/Songs_unknownlevels.jpg/150px-Songs_unknownlevels.jpg" height="150" width="150" alt="alternative text!!!"></a></td>
         <td>UNKNOWN LEVELS<i class="material-icons" style="font-size:50px;position: absolute; left: 1400px;top: 5930px;">star</i><span class="timeline3">2024.10/13 reach <span style="color:rgb(242, 251, 86)">ptt12.00</span></span></td>
