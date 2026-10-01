@@ -72,7 +72,7 @@ function updateProgressBar(ptt,inputScore) {
     else{
         bar.style.backgroundColor="rgb(166, 97, 164)";
     }
-    bar.innerText = "your playptt:" + ptt;
+    bar.innerHTML = `<span class="progress-label">your playptt: ${ptt}</span>`;
 }
 
 function calculateB30Avg(){//計算B30平均
