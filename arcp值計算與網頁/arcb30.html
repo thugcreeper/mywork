@@ -7,75 +7,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcaea B30</title>
     <link rel="stylesheet" type="text/css" href=".\css\webdeco.css">
-</head>
-    <div class="inline-container">
-        <em><h1 class="inline-text text1" style="font-size: 100px;">Record </h1></em>
-        <em><h1 class="inline-text text2" style="font-size: 100px;">My </h1></em>
-        <em><h1 class="inline-text text3" style="font-size: 100px;">Playptt</h1></em>
-        <em><h1 class="inline-text" style="font-size: 20px; float: right;font-family: Helvetica;">complete in 2023.11.14</h1></em>
-    </div>
-    <div class="inline-container">
-        <p class="inline-text pttpic"><img src="https://arcwiki.mcd.blue/images/thumb/1/1a/Rating_5.png/75px-Rating_5.png"height="75" width="75"style="position: relative; left: 2px; top: 20px;" alt="alternative text!!!"></p>
-        <p><h1 class="inline-text"><span style="font-size: 40px;color:gold">B30average </span><span style="font-size: 40px; color: rgb(3, 150, 3);">= <span id="b30avg"></span></span></h1>
-    </p>
-    </div>
+ </head>
+<body>
+    <header class="site-header">
+        <div class="title-group">
+            <h1 class="text1">Record</h1>
+            <h1 class="text2">My</h1>
+            <h1 class="text3">Playptt</h1>
+        </div>
+        <p class="completion-date">complete in 2023.11.14</p>
+    </header>
 
-    <div class="aligndiv">
-        <div class="arcwikilink"><!--https://arcst.yurisaki.top/-->
-            <a href="https://arcwiki.mcd.blue/index.php?title=%E5%AE%9A%E6%95%B0%E8%A1%A8&variant=zh-tw" target="_blank"><!--arc wiki link-->
-                <img src="https://truth.bahamut.com.tw/s01/201907/be2796de313e978d499fd38e3768a0ed.JPG" height="600" width="1090" alt="alternative text!!!"></a>
-                 <!--click picture can open this web in a new web-->
-                    <h2 class="inline-text">input song's </h2>
-                    <h2 class="inline-text" style="color:red">score</h2><br>    
-                    <input type="number"  id="score" min="0" max="10002221" step="1" >
-                    <button onclick="getscore()">click me to get playptt</button>  
-                <p></p>
-                <div class="inline-container">
-                    <h2 class="inline-text">input song's </h2>
-                    <h2 class="inline-text" style="color:#026ed9">constant</h2><br>
-                    <input type="number"  id="constant" min="1.0" max="12.0" step="0.1" value="10.0"><br>
-                    <div  class="showptt">
-                        <div id="output" >
+    <section class="summary" aria-label="B30 summary">
+        <img src="https://arcwiki.mcd.blue/images/thumb/1/1a/Rating_5.png/75px-Rating_5.png" alt="Arcaea rating icon">
+        <h2><span class="summary-label">B30average</span> = <span id="b30avg">-</span></h2>
+    </section>
 
-                        </div><!--show final playptt here-->
+    <main>
+        <section class="tool-layout">
+            <div class="arcwikilink">
+                <a href="https://arcwiki.mcd.blue/index.php?title=%E5%AE%9A%E6%95%B8%E8%A1%A8&variant=zh-tw" target="_blank" rel="noopener">
+                    <img src="https://truth.bahamut.com.tw/s01/201907/be2796de313e978d499fd38e3768a0ed.JPG" alt="Arcaea constant table">
+                </a>
+                <div class="calculator-form">
+                    <h2>input song's <span class="score-label">score</span></h2>
+                    <div class="form-row">
+                        <input type="number" id="score" min="0" max="10002221" step="1">
+                        <button onclick="getscore()">click me to get playptt</button>
                     </div>
+                    <h2>input song's <span class="constant-label">constant</span></h2>
+                    <input type="number" id="constant" min="1.0" max="12.0" step="0.1" value="10.0">
+                    <div class="showptt"><div id="output"></div></div>
                 </div>
                 <div class="searchbar">
-                <h2 class="inline-text">search song</h2><br>
-                <input type="text" id="searchInput" placeholder="Search...">
-                <select id="searchType">
-                    <option value="song">Song name</option>
-                    <option value="constant">Constant</option>
-                    <option value="difficulty">Difficulty</option>
-                </select>
-                <button style="background-color:pink; width:150px;" onclick="searchFunction()">Search</button>
-                </div>
-                <div id="searchModal" class="modal"><!-- 顯示搜尋結果 -->
-                    <div class="search_modal_content">
-                        <div id="searchResult"></div>
+                    <h2>search song</h2>
+                    <div class="form-row">
+                        <input type="text" id="searchInput" placeholder="Search...">
+                        <select id="searchType">
+                            <option value="song">Song name</option>
+                            <option value="constant">Constant</option>
+                            <option value="difficulty">Difficulty</option>
+                        </select>
+                        <button onclick="searchFunction()">Search</button>
                     </div>
                 </div>
                 <div class="arcsticker">
-                    <a href="https://arcst.yurisaki.top/" target="_blank">
-                        <img src=".\assets\sticker.png"height="165" width="165" alt="alternative text!!!">
+                    <a href="https://arcst.yurisaki.top/" target="_blank" rel="noopener">
+                        <img src=".\assets\sticker.png" alt="Arcaea sticker">
                     </a>
                 </div>
-        </div>  
-        <div class="randompic"><!--for random picture-->
-            <h1>Recommend me a song</h1>
-            <img id="randompic" src="https://www.collinsdictionary.com/images/full/dice_393025615_1000.jpg" height="350" width="350" alt="alternative text!!!"></a>
-            <button onclick="getpics()">Let's gooooo!!!</button>
-        </div>
-        <div class="note">
-            <h1 style="color:red">NOTE:</h1>
-            <h2>the song dosen't include all arcaea's song,only included the song that I have</h2>
-        </div>
-        <script src="./js/fetchSongData.js"></script>
-        <script src="./js/playpttcalcfunction.js"></script>
-        <script src="./js/getrandompicfunction.js"></script>
-    </div>
-    
-    <table id="playpttTable">
+            </div>
+            <div class="tool-side">
+                <div class="randompic">
+                    <h2>Recommend me a song</h2>
+                    <img id="randompic" src="https://www.collinsdictionary.com/images/full/dice_393025615_1000.jpg" alt="Recommended song cover">
+                    <button onclick="getpics()">Let's gooooo!!!</button>
+                </div>
+                <aside class="note">
+                    <h2>NOTE:</h2>
+                    <p>the song doesn't include all Arcaea songs, only the songs that I have</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="table-section">
+            <div class="table-scroll">
+                <table id="playpttTable">
         <thead>
         <tr style="font-size: 20px;">
             <th style ="width:150px;"><span class="header-text">Photo</span> <span class="arrow"></span></th>
@@ -89,7 +86,10 @@
         <!--below is song's info-->
         <tbody>
         </tbody>
-    </table>
+                </table>
+            </div>
+        </section>
+    </main>
     <div class="footer">
         <div class="horizontal">
             <ul>
@@ -132,6 +132,14 @@
             </ul>
         </div>
     </div>
+    <div id="searchModal" class="modal">
+        <div class="search_modal_content">
+            <div id="searchResult"></div>
+        </div>
+    </div>
+    <script src="./js/fetchSongData.js"></script>
+    <script src="./js/playpttcalcfunction.js"></script>
+    <script src="./js/getrandompicfunction.js"></script>
 </body>
 </html>
     

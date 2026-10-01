@@ -367,3 +367,284 @@
         text-decoration: none;
         cursor: pointer;
         }
+
+        /* Responsive layout */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 1rem;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .site-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 1rem;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        .title-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35em;
+            min-width: 0;
+        }
+
+        .title-group h1 {
+            margin: 0;
+            font-size: 6rem;
+        }
+
+        .completion-date {
+            flex: 0 0 auto;
+            margin: 0;
+            font-family: Helvetica, sans-serif;
+        }
+
+        .summary {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            max-width: 1500px;
+            margin: 1rem auto 1.5rem;
+        }
+
+        .summary img {
+            width: 75px;
+        }
+
+        .summary h2 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .summary-label {
+            color: gold;
+        }
+
+        .tool-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 370px;
+            gap: 1rem;
+            max-width: 1500px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .arcwikilink,
+        .randompic,
+        .note,
+        .searchbar,
+        .arcsticker {
+            width: auto;
+            height: auto;
+            position: static;
+        }
+
+        .arcwikilink {
+            min-width: 0;
+        }
+
+        .arcwikilink > a > img {
+            width: 100%;
+            aspect-ratio: 1090 / 600;
+            object-fit: cover;
+        }
+
+        .calculator-form {
+            margin-top: 1rem;
+        }
+
+        .calculator-form h2,
+        .searchbar h2,
+        .randompic h2 {
+            margin: 0.5rem 0;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .form-row input,
+        .form-row select,
+        .form-row button {
+            max-width: 100%;
+        }
+
+        .score-label {
+            color: red;
+        }
+
+        .constant-label {
+            color: #026ed9;
+        }
+
+        .tool-side {
+            display: grid;
+            align-content: start;
+            gap: 1rem;
+        }
+
+        .randompic {
+            display: grid;
+            justify-items: start;
+            gap: 0.75rem;
+        }
+
+        .randompic #randompic {
+            width: min(350px, 100%);
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+
+        .note h2 {
+            margin-top: 0;
+            color: red;
+        }
+
+        .note p {
+            margin-bottom: 0;
+        }
+
+        .searchbar {
+            margin-top: 1rem;
+        }
+
+        .arcsticker {
+            margin-top: 1rem;
+        }
+
+        .arcsticker img {
+            width: 165px;
+        }
+
+        .table-section {
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        .table-scroll {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        #playpttTable {
+            width: 100%;
+            min-width: 980px;
+            border-collapse: separate;
+        }
+
+        #playpttTable td img,
+        #resultTable td img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: auto;
+        }
+
+        .horizontal ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .horizontal li {
+            flex: 1 1 180px;
+            width: auto;
+        }
+
+        .search_modal_content {
+            width: min(95vw, 1200px);
+            min-width: 0;
+            max-width: 95vw;
+        }
+
+        #searchResult {
+            overflow-x: auto;
+        }
+
+        #resultTable {
+            min-width: 980px;
+        }
+
+        @media (max-width: 900px) {
+            body {
+                padding: 0.75rem;
+            }
+
+            .site-header {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .title-group h1 {
+                font-size: 4rem;
+            }
+
+            .tool-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .tool-side {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .title-group h1 {
+                font-size: 2.75rem;
+            }
+
+            .summary h2 {
+                font-size: 1.75rem;
+            }
+
+            .summary img {
+                width: 56px;
+            }
+
+            .tool-side {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                align-items: stretch;
+                flex-direction: column;
+            }
+
+            .form-row input,
+            .form-row select,
+            .form-row button {
+                width: 100%;
+            }
+
+            .showptt {
+                width: 100%;
+            }
+
+            .modal_content {
+                width: 90%;
+                height: auto;
+                max-height: 80vh;
+                overflow-y: auto;
+                padding: 1rem;
+            }
+
+            #web_description {
+                padding: 1rem;
+                text-indent: 1.5rem;
+                letter-spacing: 0;
+            }
+        }
