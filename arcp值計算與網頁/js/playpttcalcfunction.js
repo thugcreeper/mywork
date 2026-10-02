@@ -27,6 +27,15 @@ function getscore() {
     if (!isNaN(result)) updateProgressBar(result, inputScore);
 }
 
+function calculatePlayptt(score, constant) {
+    if (!Number.isFinite(score) || !Number.isFinite(constant) || score < 0) return null;
+    if (score >= 10000000) return (constant + 2).toFixed(6);
+    if (score >= 9800000) return (constant + 1 + ((score - 9800000) / 200000)).toFixed(6);
+    if (score >= 9500000) return (constant + (score - 9500000) / 300000).toFixed(6);
+    if (score >= 9200000) return (constant - (9500000 - score) / 300000).toFixed(6);
+    return "0.000000";
+}
+
 function scoreAndConstantAlert() {
     let scoreInput = document.getElementById('score'); //get elementbyid only get html element
     let constantInput = document.getElementById('constant');
@@ -87,12 +96,15 @@ function calculateB30Avg() {//計算B30平均
         return;
     }
     let rows = table.querySelectorAll("tbody tr");
-    for (let i = 0; i < 30; i++) {
-        let cells = rows[i].querySelectorAll("td");    // 抓出所有 td
-        let value = cells[5].innerText; // 索引從0開始，第6個是索引5
-        sum += parseFloat(value);
-    }
-    document.getElementById("b30avg").innerText = (sum / 30).toFixed(6);
+    let count = 0;
+    rows.forEach(row => {
+        let value = parseFloat(row.querySelector(".row-playptt")?.innerText);
+        if (!isNaN(value)) {
+            sum += value;
+            count++;
+        }
+    });
+    document.getElementById("b30avg").innerText = count ? (sum / count).toFixed(6) : "-";
 }
 
 let isAscending = true; // 初始為升序

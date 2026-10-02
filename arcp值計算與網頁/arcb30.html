@@ -71,9 +71,32 @@
                 </div>
                 <aside class="note">
                     <h2>NOTE:</h2>
-                    <p>the song doesn't include all Arcaea songs, only the songs that I have</p>
+                    <p>選歌資料庫使用公開 ArcaeaSongDatabase，B30 成績仍可自行編輯。</p>
                 </aside>
             </div>
+        </section>
+
+        <section class="record-editor" aria-label="Edit B30 records">
+            <div class="editor-heading">
+                <div>
+                    <h2>編輯我的 B30</h2>
+                    <p>選擇歌曲與難度，輸入分數後會即時更新 PlayPTT。</p>
+                </div>
+                <strong><span id="recordCount">0</span> / 30 rows</strong>
+            </div>
+            <div class="record-form">
+                <label for="songSelector">歌曲</label>
+                <select id="songSelector" aria-label="選擇歌曲"></select>
+                <label for="difficultySelector">難度</label>
+                <select id="difficultySelector" aria-label="選擇難度"></select>
+                <label for="recordScore">分數</label>
+                <input type="number" id="recordScore" min="0" max="10002221" step="1" placeholder="輸入分數">
+                <div class="song-preview" id="songPreview" hidden>
+                    <img id="songPreviewImage" alt="歌曲曲繪">
+                </div>
+                <button type="button" id="addRecordButton">加入表格</button>
+            </div>
+            <div id="recordToast" class="record-toast" role="status" aria-live="polite"></div>
         </section>
 
         <section class="table-section">
@@ -90,9 +113,11 @@
                             <th style="width:150px;" onclick="sortTable(3,this)"><span
                                     class="header-text">Constant</span> <span class="arrow"></span></th>
                             <th style="width:160px;" onclick="sortTable(4,this)"><span class="header-text">Score</span>
-                                <span class="arrow"></span></th>
+                                <span class="arrow"></span>
+                            </th>
                             <th style="width:150px;" onclick="sortTable(5,this)"><span
                                     class="header-text">PlayPTT</span> <span class="arrow"></span></th>
+                            <th style="width:100px;"><span class="header-text">Action</span></th>
                         </tr>
                     </thead>
                     <!--below is song's info-->
@@ -151,6 +176,7 @@
         </div>
     </div>
     <script src="./js/fetchSongData.js"></script>
+    <script src="./js/recordEditor.js"></script>
     <script src="./js/playpttcalcfunction.js"></script>
     <script src="./js/getrandompicfunction.js"></script>
 </body>
