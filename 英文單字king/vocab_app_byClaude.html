@@ -37,6 +37,25 @@
       <div class="header-divider"></div>
     </div>
 
+    <section id="home-view">
+      <h2>我的單字庫</h2>
+      <p class="home-description">選擇一套單字庫開始複習，或編輯自己的單字。</p>
+      <form class="create-library" onsubmit="createLibrary(event)">
+        <label for="library-name">建立單字庫</label>
+        <div class="io-row">
+          <input id="library-name" placeholder="例如：中山大學考古題" maxlength="80" required />
+          <button class="btn btn-primary" type="submit">建立單字庫</button>
+        </div>
+      </form>
+      <div id="library-list" class="library-grid"></div>
+      <p class="io-note">資料只儲存在目前瀏覽器，請定期進入各單字庫匯出 JSON 備份；換裝置需自行匯入。</p>
+    </section>
+
+    <div id="workspace-view" hidden>
+    <div class="workspace-heading">
+      <button class="btn btn-ghost" onclick="showHome()">← 返回首頁</button>
+      <h2 id="active-library-name"></h2>
+    </div>
     <!-- Tabs -->
     <div class="tabs">
       <button class="tab active" onclick="switchTab('library')"><i class="ti ti-books"></i>單字庫</button>
@@ -57,7 +76,7 @@
           <button class="btn btn-danger" onclick="openClearModal()"><i class="ti ti-trash"></i>清空</button>
           <input type="file" id="import-file" accept=".json" style="display:none" onchange="importWords(event)" />
         </div>
-        <div class="io-note">💡 匯出 JSON 後可在其他裝置匯入，資料不會因清除快取而遺失。</div>
+        <div class="io-note">匯入、匯出與清空只作用於目前單字庫。清除網站資料可能遺失紀錄，請定期下載 JSON 備份。</div>
       </div>
 
       <!-- Search + toolbar -->
@@ -76,7 +95,7 @@
 
       <!-- Add form -->
       <div class="add-form">
-        <div class="add-form-title"><i class="ti ti-plus" aria-hidden="true"></i> 新增單字</div>
+        <div class="add-form-title" id="word-form-title">新增單字</div>
         <div class="form-row">
           <input id="new-word" placeholder="英文單字"
             onkeydown="if(event.key==='Enter')document.getElementById('new-meaning').focus()" />
@@ -85,7 +104,8 @@
         <textarea id="new-meaning" placeholder="中文意思 / 解釋"
           onkeydown="if(event.key==='Enter'&&(event.ctrlKey||event.metaKey))addWord()"></textarea>
         <div class="btn-row">
-          <button class="btn btn-primary" onclick="addWord()"><i class="ti ti-plus"></i>新增單字</button>
+          <button class="btn btn-primary" id="save-word-btn" onclick="addWord()">新增單字</button>
+          <button class="btn btn-ghost" id="cancel-edit-btn" onclick="resetWordForm()" hidden>取消編輯</button>
         </div>
       </div>
     </div>
@@ -106,7 +126,7 @@
             </div>
           </div>
           <div class="setup-section">
-            <div class="setup-label">方向</div>
+            <div class="setup-label">選擇題方向</div>
             <div class="chip-group">
               <div class="chip sel" id="chip-en2zh" onclick="selectDir('en2zh')">英 → 中</div>
               <div class="chip" id="chip-zh2en" onclick="selectDir('zh2en')">中 → 英</div>
@@ -121,6 +141,7 @@
               <div class="chip" id="chip-all" onclick="selectCount(0)">全部</div>
             </div>
           </div>
+          <p class="quiz-note">拼寫題固定顯示中文，請輸入英文答案。</p>
           <button class="quiz-start-btn" onclick="startQuiz()"><i class="ti ti-player-play"></i>開始測驗</button>
         </div>
       </div>
@@ -180,6 +201,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
 

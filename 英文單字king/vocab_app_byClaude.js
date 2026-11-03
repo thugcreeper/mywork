@@ -2,15 +2,105 @@
 const PRESET_WORDS = [{ "word": "promulgation", "meaning": "公佈；宣傳；普及", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "entrench", "meaning": "鞏固；挖掘；確立；侵犯", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "distention", "meaning": "膨脹；擴張:使窒息；悶死", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "alliterate", "meaning": "押頭韻", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "ambivert", "meaning": "雙重性格者", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "beguiled", "meaning": "欺騙", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "obituary", "meaning": "訃聞", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "complexional", "meaning": "膚色的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "syndicate", "meaning": "財團", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "plough", "meaning": "犁 耕作", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "trespassing", "meaning": "擅自進入私人土地", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "complaisant", "meaning": "有禮貌的 殷勤的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "reminiscent", "meaning": "使人憶起…的；懷舊的；提醒的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "depute", "meaning": "授權、委任", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "censure", "meaning": "譴責", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "acrimonious", "meaning": "刻薄的；激烈的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "gait", "meaning": "步態", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "dabbler", "meaning": "戲水者", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "inanition", "meaning": "空虛、死氣沉沉", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "fumigate", "meaning": "煙燻、香薰", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "overgraze", "meaning": "過度放牧", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "peristyle", "meaning": "列柱廊；圍柱列；列柱圍繞的中庭", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "delineate", "meaning": "詳細描述；畫…的輪廓", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "intervallic", "meaning": "音程的；間隔；距離；休息時間", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "dilutor", "meaning": "稀釋劑", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "anode", "meaning": "陽極", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "gaudily", "meaning": "俗麗的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "apparition", "meaning": "幽靈、幻影", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "atheist", "meaning": "無神論者", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "disrepute", "meaning": "蒙羞", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "purposely", "meaning": "有意地", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "jot", "meaning": "匆匆記下", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "meditation", "meaning": "冥想；沉思", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "gastric", "meaning": "胃的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "bearing", "meaning": "關係；舉止；生育期；結果實期；方向感；意思", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "esoteric", "meaning": "深奧的；難理解的；隱密的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "rubber", "meaning": "橡膠；橡膠製品", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "imprimatur", "meaning": "出版許可；認可", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "leader", "meaning": "領袖；領導者；領先的人(或事物)", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "epicentral", "meaning": "震中的；中心的；中樞的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "cardinal", "meaning": "紅衣主教；鮮紅色的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "chap", "meaning": "傢伙；小伙子", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "broadcast", "meaning": "廣播；播送", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "atheists", "meaning": "無神論者", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "retrogress", "meaning": "倒退；退步", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "expostulatory", "meaning": "忠告的；訓誡的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "activist", "meaning": "社會運動家", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "cinch", "meaning": "容易之事；小事一樁；肚帶", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "debut", "meaning": "初次登臺", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "wasteful", "meaning": "浪費的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "initiative", "meaning": "主動性；進取心", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "pictorial", "meaning": "圖畫的；繪畫的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "ailment", "meaning": "病痛；疾病", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "energetic", "meaning": "精力充沛的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "emulative", "meaning": "好勝的；模仿的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "maiden", "meaning": "少女；初次的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "theoretical", "meaning": "理論上的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "earring", "meaning": "耳環", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "alacrity", "meaning": "欣然同意；樂意；活潑；輕快", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "relish", "meaning": "美味；喜愛；佐料；品味", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "vanity", "meaning": "虛榮心", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "gasconade", "meaning": "吹牛；誇口", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "dullsville", "meaning": "無聊的地方；極無趣", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "backwards", "meaning": "向後地", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "pennate", "meaning": "有羽翼的；羽狀的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "extempore", "meaning": "臨時的；不準備的/即興地", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "oust", "meaning": "驅逐；革職；剝奪", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "gawk", "meaning": "呆子／目瞪口呆", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "boulder", "meaning": "巨石", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "hove", "meaning": "舉起(heave的過去式與過去分詞)", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "cadenced", "meaning": "有節奏的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "tertiary", "meaning": "第三的；第三順位的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "roundabout", "meaning": "迂迴的；間接的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "lofty", "meaning": "崇高的；高遠的；高傲的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "ensnare", "meaning": "陷害、誘捕", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "rejoicingly", "meaning": "歡欣鼓舞地", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "bowdlerize", "meaning": "刪改、刪節", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "caveat", "meaning": "警告；附帶條件", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "defiant", "meaning": "挑釁的；反抗的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "erstwhile", "meaning": "昔日的；以前的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "insensitive", "meaning": "麻木的；無感的；不體貼的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "grievance", "meaning": "不滿；申訴；抱怨", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "effluent", "meaning": "污水；廢水；排放物", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "illiberal", "meaning": "吝嗇的；狹隘的；不寬容的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "corroborate", "meaning": "證實；確證", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "asunder", "meaning": "四分五裂；分離地", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "apogee", "meaning": "最高點；頂點", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "brusque", "meaning": "粗暴的；唐突無禮的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "galvanic", "meaning": "突然的；觸電般的；電流引起的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "hanker", "meaning": "渴望；嚮往", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "analyze", "meaning": "分析", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "durability", "meaning": "耐久性；耐用度", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "commence", "meaning": "開始", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "hermetically", "meaning": "密封地；完全隔絕地", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "ultimately", "meaning": "最終；最後", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "heathen", "meaning": "異教徒", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "amelioration", "meaning": "改善；改良；改正", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "relinquish", "meaning": "放棄；撤出；交出", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "appreciable", "meaning": "可見的、明顯的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "abashment", "meaning": "羞愧；難為情", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "botanically", "meaning": "以植物學地；從植物學角度", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "syntax", "meaning": "語法；句法", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "contumely", "meaning": "傲慢；侮辱", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "scanty", "meaning": "不足的；稀少的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "convoluted", "meaning": "複雜難懂的；曲折的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "barometric", "meaning": "氣壓的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "bedlam", "meaning": "喧鬧", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "begirt", "meaning": "圍繞", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "decanters", "meaning": "玻璃瓶／醒酒器", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "fiend", "meaning": "狂熱愛好者；惡魔般的人", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "divisional", "meaning": "部門的；分區的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "upend", "meaning": "倒置；顛倒", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "empyrean", "meaning": "天空的；天堂的（詩意用法）", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "intangible", "meaning": "難以形容的；無形的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "dissertation", "meaning": "論文", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "abduct", "meaning": "綁架；誘拐", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "proliferate", "meaning": "擴散；猛增；激增", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "contemptuous", "meaning": "輕視的；瞧不起的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "eidetic", "meaning": "鮮明的；異常清晰的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "furtive", "meaning": "鬼鬼祟祟的；偷偷的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "chaste", "meaning": "貞潔的；純潔的；樸素的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "plangent", "meaning": "悲切的；（聲音）洪亮哀傷的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "inflexible", "meaning": "不可變的；頑固的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "derivative", "meaning": "衍生的；派生詞", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "cobby", "meaning": "結實的；短壯有力的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "stewardess", "meaning": "空服員；女服務員", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "inamorata", "meaning": "情人（女性）", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "espousal", "meaning": "擁護；支持；訂(或結)婚", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "dingy", "meaning": "昏暗的；骯髒的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "encyclical", "meaning": "通諭", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "fortitude", "meaning": "堅忍不拔；剛毅", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "complicity", "meaning": "共謀；串通關係", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "exclamation", "meaning": "驚呼；感嘆", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "praxis", "meaning": "實踐；實際運用", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "quibblers", "meaning": "吹毛求疵的人", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "highbrow", "meaning": "高知識份子的；陽春白雪的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "synthetic", "meaning": "合成的；人造的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "counterpoint", "meaning": "對位；對比", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "Pope", "meaning": "教宗", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "foss", "meaning": "壕溝；護城河", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "bulge", "meaning": "凸出", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "derision", "meaning": "嘲笑；嘲弄", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "construe", "meaning": "詮釋；解釋；理解為", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "lechery", "meaning": "好色；色慾；淫蕩", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "feebleminded", "meaning": "低能的；愚笨的；意志薄弱的", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }, { "word": "limp", "meaning": "跛行；緩慢費力地前進", "phonetic": "", "quizCount": 0, "mastered": false, "streak": 0 }];
 
 // ─── State ───
-const STORE_KEY = 'wordcraft_v1';
+const STORE_KEY = 'wordcraft_v2';
 const PAGE_SIZE = 20;
-let words = JSON.parse(localStorage.getItem(STORE_KEY) || 'null') || [];
+let libraries = loadLibraries();
+let activeLibraryId = null;
+let words = [];
+let editingWordIndex = null;
 let currentPage = 1;
 let quizSettings = { types: ['mc', 'spell'], dir: 'en2zh', count: 10 };
 let quizQueue = [], quizIndex = 0, score = 0, currentQ = null, currentWord = null;
 let audioCache = {};
 
-function save() { localStorage.setItem(STORE_KEY, JSON.stringify(words)); }
+function loadLibraries() {
+  const stored = localStorage.getItem(STORE_KEY);
+  if (stored !== null) return JSON.parse(stored).libraries;
+  const legacyWords = JSON.parse(localStorage.getItem('wordcraft_v1') || '[]');
+  const migrated = legacyWords.length ? [{ id: 'legacy', name: '我的單字庫', words: legacyWords }] : [];
+  localStorage.setItem(STORE_KEY, JSON.stringify({ version: 2, libraries: migrated }));
+  // Keep the old storage key as a recovery copy.
+  return migrated;
+}
+
+function save() {
+  const library = libraries.find(l => l.id === activeLibraryId);
+  if (library) library.words = words;
+  localStorage.setItem(STORE_KEY, JSON.stringify({ version: 2, libraries }));
+}
+
+function renderHome() {
+  const list = document.getElementById('library-list');
+  list.replaceChildren();
+  if (!libraries.length) {
+    list.innerHTML = '<div class="empty-state"><p>還沒有單字庫，先建立第一套吧。</p></div>';
+  }
+  libraries.forEach(library => {
+    const card = document.createElement('article');
+    card.className = 'library-card';
+    const title = document.createElement('h3');
+    title.textContent = library.name;
+    const summary = document.createElement('p');
+    summary.textContent = `${library.words.length} 個單字 · ${library.words.filter(w => w.mastered).length} 個熟練`;
+    const actions = document.createElement('div');
+    actions.className = 'btn-row';
+    [['複習', 'quiz', 'btn-primary'], ['編輯', 'library', 'btn-ghost']].forEach(([label, tab, style]) => {
+      const button = document.createElement('button');
+      button.className = `btn ${style}`;
+      button.textContent = label;
+      button.onclick = () => openLibrary(library.id, tab);
+      actions.append(button);
+    });
+    card.append(title, summary, actions);
+    list.append(card);
+  });
+  document.getElementById('hs-total').textContent = libraries.reduce((n, l) => n + l.words.length, 0);
+  document.getElementById('hs-mastered').textContent = libraries.reduce((n, l) => n + l.words.filter(w => w.mastered).length, 0);
+}
+
+function createLibrary(event) {
+  event.preventDefault();
+  const input = document.getElementById('library-name');
+  const name = input.value.trim();
+  if (!name) { showToast('請輸入單字庫名稱'); return; }
+  if (libraries.some(l => l.name.toLowerCase() === name.toLowerCase())) { showToast('已有同名單字庫，請換個名稱'); return; }
+  const library = { id: crypto.randomUUID(), name, words: [] };
+  libraries.push(library);
+  save();
+  input.value = '';
+  openLibrary(library.id, 'library');
+  showToast('已建立單字庫，可新增或匯入單字');
+}
+
+function resetQuiz() {
+  quizQueue = []; quizIndex = 0; currentQ = null; currentWord = null;
+  document.getElementById('quiz-setup-view').style.display = 'block';
+  document.getElementById('quiz-play-view').style.display = 'none';
+  document.getElementById('quiz-result-view').style.display = 'none';
+}
+
+function openLibrary(id, tab) {
+  const library = libraries.find(l => l.id === id);
+  if (!library) return;
+  activeLibraryId = id;
+  words = library.words;
+  currentPage = 1;
+  resetWordForm(); resetQuiz();
+  document.getElementById('search-input').value = '';
+  document.getElementById('active-library-name').textContent = library.name;
+  document.getElementById('home-view').hidden = true;
+  document.getElementById('workspace-view').hidden = false;
+  renderLibrary(); switchTab(tab);
+}
+
+function showHome() {
+  resetQuiz(); resetWordForm(); closeModal();
+  if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+  activeLibraryId = null; words = [];
+  document.getElementById('home-view').hidden = false;
+  document.getElementById('workspace-view').hidden = true;
+  renderHome();
+}
 
 function showToast(msg) {
   const t = document.getElementById('toast');
@@ -102,6 +192,7 @@ function renderLibrary() {
           ${w.quizCount ? `<div class="wc-meta">測驗 ${w.quizCount} 次${w.streak >= 2 ? ` · 🔥 連續答對 ${w.streak} 次` : ''}</div>` : ''}
         </div>
         <div class="wc-actions">
+          <button class="icon-btn" onclick="editWord(${gi})" title="編輯"><i class="ti ti-pencil" aria-hidden="true"></i></button>
           <button class="icon-btn play" id="play-lib-${gi}" onclick="playAudio('${escAttr(w.word)}','play-lib-${gi}')" title="播放"><i class="ti ti-volume" aria-hidden="true"></i></button>
           <button class="icon-btn danger" onclick="removeWord(${gi})" title="刪除"><i class="ti ti-trash" aria-hidden="true"></i></button>
         </div>
@@ -121,28 +212,52 @@ function renderLibrary() {
 function goPage(p) { currentPage = p; renderLibrary(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
 function escHtml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
-function escAttr(s) { return String(s).replace(/'/g, "\\'"); }
+function escAttr(s) { return escHtml(JSON.stringify(String(s)).slice(1, -1).replace(/'/g, "\\'").replace(/</g, '\\u003c')); }
 
 function addWord() {
   const word = document.getElementById('new-word').value.trim();
   const meaning = document.getElementById('new-meaning').value.trim();
   const phonetic = document.getElementById('new-phonetic').value.trim();
   if (!word || !meaning) { showToast('請填寫單字與意思'); return; }
-  if (words.find(w => w.word.toLowerCase() === word.toLowerCase())) { showToast('單字已存在！'); return; }
-  words.unshift({ word, meaning, phonetic, quizCount: 0, mastered: false, streak: 0, addedAt: Date.now() });
+  if (words.some((w, i) => i !== editingWordIndex && w.word.toLowerCase() === word.toLowerCase())) { showToast('單字已存在！'); return; }
+  const isEditing = editingWordIndex !== null;
+  if (isEditing) Object.assign(words[editingWordIndex], { word, meaning, phonetic });
+  else words.unshift({ word, meaning, phonetic, quizCount: 0, mastered: false, streak: 0, addedAt: Date.now() });
   save(); currentPage = 1; renderLibrary();
-  ['new-word', 'new-meaning', 'new-phonetic'].forEach(id => document.getElementById(id).value = '');
+  resetWordForm();
   document.getElementById('new-word').focus();
-  showToast(`「${word}」已新增 ✓`);
+  showToast(`「${word}」已${isEditing ? '更新' : '新增'} ✓`);
+}
+
+function editWord(index) {
+  editingWordIndex = index;
+  const word = words[index];
+  document.getElementById('new-word').value = word.word;
+  document.getElementById('new-meaning').value = word.meaning;
+  document.getElementById('new-phonetic').value = word.phonetic || '';
+  document.getElementById('word-form-title').textContent = '編輯單字';
+  document.getElementById('save-word-btn').textContent = '儲存修改';
+  document.getElementById('cancel-edit-btn').hidden = false;
+  document.getElementById('new-word').focus();
+}
+
+function resetWordForm() {
+  editingWordIndex = null;
+  ['new-word', 'new-meaning', 'new-phonetic'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('word-form-title').textContent = '新增單字';
+  document.getElementById('save-word-btn').textContent = '新增單字';
+  document.getElementById('cancel-edit-btn').hidden = true;
 }
 
 function removeWord(i) {
+  resetWordForm();
   const w = words[i].word;
   words.splice(i, 1); save(); renderLibrary();
   showToast(`「${w}」已移除`);
 }
 
 function loadPreset() {
+  resetWordForm();
   let added = 0;
   PRESET_WORDS.forEach(p => {
     if (!words.find(w => w.word.toLowerCase() === p.word.toLowerCase())) {
@@ -168,19 +283,21 @@ function exportWords() {
 
 function importWords(e) {
   const file = e.target.files[0]; if (!file) return;
+  const targetLibraryId = activeLibraryId;
   const reader = new FileReader();
   reader.onload = ev => {
+    if (activeLibraryId !== targetLibraryId) { showToast('單字庫已切換，請重新匯入'); return; }
     try {
       const data = JSON.parse(ev.target.result);
       if (!Array.isArray(data)) throw new Error('格式錯誤');
       let added = 0;
       data.forEach(w => {
-        if (w.word && w.meaning && !words.find(x => x.word.toLowerCase() === w.word.toLowerCase())) {
-          words.push({ word: w.word, meaning: w.meaning, phonetic: w.phonetic || '', quizCount: w.quizCount || 0, mastered: w.mastered || false, streak: w.streak || 0, addedAt: Date.now() });
+        if (typeof w?.word === 'string' && typeof w.meaning === 'string' && w.word.trim() && w.meaning.trim() && !words.find(x => x.word.toLowerCase() === w.word.trim().toLowerCase())) {
+          words.push({ word: w.word.trim(), meaning: w.meaning.trim(), phonetic: typeof w.phonetic === 'string' ? w.phonetic : '', quizCount: Number.isInteger(w.quizCount) && w.quizCount >= 0 ? w.quizCount : 0, mastered: w.mastered === true, streak: Number.isInteger(w.streak) && w.streak >= 0 ? w.streak : 0, addedAt: Date.now() });
           added++;
         }
       });
-      save(); currentPage = 1; renderLibrary();
+      resetWordForm(); save(); currentPage = 1; renderLibrary();
       showToast(`已匯入 ${added} 個單字 ✓`);
     } catch (err) { showToast('匯入失敗：JSON 格式有誤'); }
   };
@@ -193,7 +310,7 @@ function openClearModal() {
   document.getElementById('clear-modal').classList.add('open');
 }
 function closeModal() { document.getElementById('clear-modal').classList.remove('open'); }
-function clearAll() { words = []; save(); currentPage = 1; renderLibrary(); closeModal(); showToast('單字庫已清空'); }
+function clearAll() { words = []; resetWordForm(); save(); currentPage = 1; renderLibrary(); closeModal(); showToast('單字庫已清空'); }
 document.getElementById('clear-modal').addEventListener('click', e => { if (e.target === e.currentTarget) closeModal(); });
 
 // ─── Quiz ───
@@ -216,14 +333,15 @@ function selectCount(n) {
 }
 
 function startQuiz() {
-  if (words.length < 4) { showToast('至少需要 4 個單字才能測驗'); switchTab('library'); return; }
+  if (!words.length) { showToast('請先新增或匯入單字'); switchTab('library'); return; }
+  if (quizSettings.types.includes('mc') && words.length < 4) { showToast('選擇題至少需要 4 個單字，也可只選拼寫題'); return; }
   const pool = shuffle(words);
   const count = quizSettings.count === 0 ? pool.length : Math.min(quizSettings.count, pool.length);
   quizQueue = pool.slice(0, count).map(w => {
     const type = quizSettings.types[Math.floor(Math.random() * quizSettings.types.length)];
     let dir = quizSettings.dir;
     if (dir === 'mix') dir = Math.random() > 0.5 ? 'en2zh' : 'zh2en';
-    if (type === 'spell') dir = 'en2zh';
+    if (type === 'spell') dir = 'zh2en';
     return { word: w, type, dir };
   });
   quizIndex = 0; score = 0;
@@ -280,6 +398,7 @@ function showQuestion() {
 }
 
 function checkMC(btn, chosen, correct) {
+  if (!currentQ || btn.disabled) return;
   document.querySelectorAll('.choice-btn').forEach(b => b.disabled = true);
   const isEn2Zh = currentQ.dir === 'en2zh';
   if (chosen === correct) {
@@ -300,6 +419,7 @@ function checkMC(btn, chosen, correct) {
 
 function checkSpell() {
   const inp = document.getElementById('spell-input');
+  if (!currentQ || inp.disabled) return;
   const answer = inp.value.trim().toLowerCase();
   const correct = currentQ.word.word.toLowerCase();
   inp.disabled = true;
@@ -340,4 +460,4 @@ function showResult() {
 }
 
 // ─── Init ───
-renderLibrary();
+renderHome();

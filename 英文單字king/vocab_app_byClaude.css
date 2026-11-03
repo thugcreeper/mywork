@@ -4,6 +4,20 @@
     padding: 0
 }
 
+[hidden] { display: none !important; }
+.home-description { color: var(--text-muted); margin: 10px 0 24px; line-height: 1.6; }
+.create-library { background: var(--cream); border: 1px solid var(--card-border); border-radius: 16px; padding: 20px; margin-bottom: 20px; }
+.create-library label { display: block; margin-bottom: 12px; font-size: 14px; font-weight: 700; }
+.create-library input { flex: 1; min-width: 180px; }
+.library-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.library-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; padding: 22px; }
+.library-card h3, .workspace-heading h2 { overflow-wrap: anywhere; }
+.library-card p { color: var(--text-muted); font-size: 13px; margin-top: 10px; }
+.workspace-heading { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+.workspace-heading h2 { font-size: 20px; }
+.quiz-note { color: rgba(245, 240, 232, 0.7); font-size: 13px; margin-top: 18px; line-height: 1.6; }
+.wc-word, .wc-meaning { overflow-wrap: anywhere; }
+
 :root {
     --ink: #1A1A14;
     --paper: #F5F0E8;
